@@ -201,7 +201,7 @@ export HADOOP_BIN="/opt/hadoop/bin"
 export PATH=$PATH:$HADOOP_BIN
 ```
 
-#### 指令寫入
+#### 或者指令寫入
 
 ```
 export HADOOP_HOME="/opt/hadoop"
@@ -214,7 +214,11 @@ $echo "export HADOOP_BIN=\"/opt/hadoop/bin\"" | sudo tee -a ~/.bashrc
 $echo "export PATH=\$PATH:\$HADOOP_BIN" | sudo tee -a ~/.bashrc
 ```
 
-1. source ~/.bashrc
+#### 最後讀取環境變數
+
+```bash
+$source ~/.bashrc
+```
 
 #### Step 13:開啟 Hadoop 環境
 
@@ -285,6 +289,10 @@ $hadoop fs -mkdir /input
 $hadoop fs -put test.txt /input
 $hadoop fs -cat /input/test.txt
 ```
+
+#### Example 2:執行 word count 範例
+
+
 
 
 
