@@ -215,7 +215,17 @@ $jps
 3679 DataNode
 ```
 
-#### Hadoop ResourceManager
+#### Hadoop ResourceManager Web UI
+
+```
+http://localhost:8088/
+```
+
+#### Hadoop HDFS Namenode Web UI
+
+```
+http://localhost:50070/
+```
 
 
 
