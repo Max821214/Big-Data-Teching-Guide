@@ -214,7 +214,7 @@ $echo "export HADOOP_BIN=\"/opt/hadoop/bin\"" | sudo tee -a ~/.bashrc
 $echo "export PATH=\$PATH:\$HADOOP_BIN" | sudo tee -a ~/.bashrc
 ```
 
-9. source ~/.bashrc
+1. source ~/.bashrc
 
 #### Step 13:開啟 Hadoop 環境
 
@@ -279,7 +279,7 @@ Hello World
 $hadoop fs -mkdir /input
 ```
 
-#### 將檔案上傳至 /input 目錄
+#### 將檔案上傳至 /input 目錄，並顯示查看內容
 
 ```
 $hadoop fs -put test.txt /input
