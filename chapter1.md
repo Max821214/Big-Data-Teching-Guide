@@ -66,11 +66,11 @@ $echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hadoop/etc/hadoop/ha
 
 #### Step 7:修改 core-site.xml
 
+#### 手動新增
+
 ```bash
 $sudo vim core-site.xml
 ```
-
-#### 新增
 
 ```xml
 <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
@@ -95,11 +95,11 @@ $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration
 
 #### Step 8:修改 yarn-site.xml
 
+#### 手動新增
+
 ```bash
 $sudo yarn-site.xml
 ```
-
-#### 新增
 
 ```xml
 <?xml version="1.0"?>
@@ -119,11 +119,11 @@ $echo '<?xml version="1.0"?><configuration><property><name>yarn.nodemanager.aux-
 
 #### Step 9:修改 mapred-site.xml
 
+#### 手動新增
+
 ```bash
 $sudo mapred-site.xml
 ```
-
-#### 新增
 
 ```xml
 <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
@@ -143,11 +143,11 @@ $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration
 
 #### Step 10:修改 hdfs-site.xml
 
+#### 手動新增
+
 ```bash
 $sudo hdfs-site.xml
 ```
-
-#### 新增
 
 ```xml
 <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
@@ -200,6 +200,21 @@ export PATH=$PATH:$HADOOP_HOME
 export HADOOP_BIN="/opt/hadoop/bin"
 export PATH=$PATH:$HADOOP_BIN
 ```
+
+#### 指令寫入
+
+```
+export HADOOP_HOME="/opt/hadoop"
+```
+
+```
+$echo "export HADOOP_HOME=\"/opt/hadoop\"" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$PATH:\$HADOOP_HOME" | sudo tee -a ~/.bashrc
+$echo "export HADOOP_BIN=\"/opt/hadoop/bin\"" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$PATH:\$HADOOP_BIN" | sudo tee -a ~/.bashrc
+```
+
+9. source ~/.bashrc
 
 #### Step 13:開啟 Hadoop 環境
 
