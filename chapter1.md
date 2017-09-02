@@ -153,10 +153,6 @@ $sudo hdfs-site.xml
 <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
     <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-    <property>
         <name>dfs.namenode.name.dir</name>
         <value>file:/opt/hadoop/tmp/hdfs/name</value>
     </property>
@@ -167,6 +163,10 @@ $sudo hdfs-site.xml
     <property>
         <name>dfs.permissions</name>
         <value>false</value>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
     </property>
 </configuration>
 ```
