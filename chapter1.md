@@ -201,5 +201,21 @@ $/opt/hadoop/sbin/start-yarn.sh
 $/opt/hadoop/sbin/start-all.sh
 ```
 
+### 測試是否安裝成功
+
+#### 查看程序是否開啟
+
+```
+$jps
+4389 NodeManager
+4053 ResourceManager
+3494 NameNode
+10583 Jps
+3902 SecondaryNameNode
+3679 DataNode
+```
+
+#### Hadoop ResourceManager
+
 
 
