@@ -261,6 +261,8 @@ http://localhost:8088/
 http://localhost:50070/
 ```
 
+### 
+
 ### 測試範例
 
 #### Example 1:在本地端建立檔案，並上傳至 HDFS
@@ -290,9 +292,27 @@ $hadoop fs -put test.txt /input
 $hadoop fs -cat /input/test.txt
 ```
 
+#### 
+
 #### Example 2:執行 word count 範例
 
+```
+$hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount /input/test.txt /output
+```
 
+#### 查看結果
+
+```
+$hadoop fs -cat /output/part-r-00000
+```
+
+#### 結果顯示
+
+```
+123	1
+Hello	2
+World	1
+```
 
 
 
