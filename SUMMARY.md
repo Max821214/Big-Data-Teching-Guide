@@ -6,5 +6,5 @@
 
 ## 實際安裝
 
-* [Hadoop](chapter1.md)
+* [Hadoop Single Node](chapter1.md)
 
