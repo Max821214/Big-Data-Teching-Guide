@@ -243,5 +243,18 @@ Hello World
 123
 ```
 
+#### 在 HDFS 建立一個 /input 檔案目錄
+
+```
+$hadoop fs -mkdir /input
+```
+
+#### 將檔案上傳至 /input 目錄
+
+```
+$hadoop fs -put test.txt /input
+$hadoop fs -cat /input/test.txt
+```
+
 
 
