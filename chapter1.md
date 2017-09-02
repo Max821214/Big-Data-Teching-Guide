@@ -188,6 +188,8 @@ $sudo chown -R ${USER}:${USER} /opt/hadoop/tmp
 
 #### Step 12:開啟 Hadoop 環境
 
+#### 分別開啟
+
 ```bash
 $/opt/hadoop/sbin/start-dfs.sh
 $/opt/hadoop/sbin/start-yarn.sh
