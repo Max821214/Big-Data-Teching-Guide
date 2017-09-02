@@ -141,7 +141,41 @@ $sudo mapred-site.xml
 $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>mapreduce.framework.name</name><value>yarn</value></property></configuration>' >> /opt/hadoop/etc/hadoop/mapred-site.xml
 ```
 
-#### 
+#### Step 10:修改 hdfs-site.xml
+
+```bash
+$sudo hdfs-site.xml
+```
+
+#### 新增
+
+```xml
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:/opt/hadoop/tmp/hdfs/name</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:/opt/hadoop/tmp/hdfs/data</value>
+    </property>
+    <property>
+        <name>dfs.permissions</name>
+        <value>false</value>
+    </property>
+</configuration>
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>dfs.replication</name><value>1</value></property><property><name>dfs.namenode.name.dir</name><value>file:/opt/hadoop/tmp/hdfs/name</value></property><property><name>dfs.datanode.data.dir</name><value>file:/opt/hadoop/tmp/hdfs/data</value></property><property><name>dfs.permissions</name><value>false</value></property></configuration>' >> /opt/hadoop/etc/hadoop/hdfs-site.xml
+```
 
 
 
