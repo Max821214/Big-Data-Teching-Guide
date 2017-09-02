@@ -227,7 +227,21 @@ http://localhost:8088/
 http://localhost:50070/
 ```
 
-#### 範例
+### 測試範例
+
+#### Example 1:在本地端建立檔案，並上傳至 HDFS
+
+```
+$sudo vim test.txt
+```
+
+#### 寫入內容
+
+```
+Hello
+Hello World
+123
+```
 
 
 
