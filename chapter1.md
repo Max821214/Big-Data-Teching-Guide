@@ -177,5 +177,14 @@ $sudo hdfs-site.xml
 $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>dfs.replication</name><value>1</value></property><property><name>dfs.namenode.name.dir</name><value>file:/opt/hadoop/tmp/hdfs/name</value></property><property><name>dfs.datanode.data.dir</name><value>file:/opt/hadoop/tmp/hdfs/data</value></property><property><name>dfs.permissions</name><value>false</value></property></configuration>' >> /opt/hadoop/etc/hadoop/hdfs-site.xml
 ```
 
+#### Step 11:建立與格式化 HDFS 目錄
+
+```bash
+$sudo mkdir -p /opt/hadoop/tmp
+$sudo mkdir -p /opt/hadoop/tmp/hdfs/name
+$sudo mkdir -p /opt/hadoop/tmp/hdfs/data
+$sudo chown -R ${USER_NAME}:${USER_NAME} /opt/hadoop/tmp
+```
+
 
 
