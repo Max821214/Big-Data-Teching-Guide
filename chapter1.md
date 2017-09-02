@@ -309,9 +309,9 @@ $hadoop fs -cat /output/part-r-00000
 #### 結果顯示
 
 ```
-123	1
-Hello	2
-World	1
+123      1
+Hello    2
+World    1
 ```
 
 
