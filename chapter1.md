@@ -188,10 +188,17 @@ $sudo chown -R ${USER}:${USER} /opt/hadoop/tmp
 
 #### Step 12:建立環境變數
 
-```bash
-$sudo mkdir -p /opt/hadoop/tmp/hdfs/name
-$sudo mkdir -p /opt/hadoop/tmp/hdfs/data
-$sudo chown -R ${USER}:${USER} /opt/hadoop/tmp
+#### 手動寫入
+
+```
+$sudo vim ~/.bashrc
+```
+
+```
+export HADOOP_HOME="/opt/hadoop"
+export PATH=$PATH:$HADOOP_HOME
+export HADOOP_BIN="/opt/hadoop/bin"
+export PATH=$PATH:$HADOOP_BIN
 ```
 
 #### Step 13:開啟 Hadoop 環境
