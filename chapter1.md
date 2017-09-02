@@ -1,7 +1,5 @@
 # Hadoop Single Node
 
-
-
 #### Step 1:新增 “ip 主機名稱”
 
 ```bash
@@ -36,8 +34,6 @@ $sudo mv hadoop-2.7.3 hadoop
 $sudo chmod -R 777 /opt/
 ```
 
-
-
 ### 配置 Hadoop 環境
 
 #### Step 5:進入 Hadoop 配置檔目錄
@@ -56,6 +52,12 @@ $sudo vim hadoop-env.sh
 
 ```
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hadoop/etc/hadoop/hadoop-env.sh
 ```
 
 #### Step 5:進入 Hadoop 配置檔目錄
