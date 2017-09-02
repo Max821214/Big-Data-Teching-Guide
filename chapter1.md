@@ -186,7 +186,15 @@ $sudo mkdir -p /opt/hadoop/tmp/hdfs/data
 $sudo chown -R ${USER}:${USER} /opt/hadoop/tmp
 ```
 
-#### Step 12:開啟 Hadoop 環境
+#### Step 12:建立環境變數
+
+```bash
+$sudo mkdir -p /opt/hadoop/tmp/hdfs/name
+$sudo mkdir -p /opt/hadoop/tmp/hdfs/data
+$sudo chown -R ${USER}:${USER} /opt/hadoop/tmp
+```
+
+#### Step 13:開啟 Hadoop 環境
 
 #### 分別開啟
 
