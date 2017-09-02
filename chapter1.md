@@ -120,8 +120,28 @@ $echo '<?xml version="1.0"?><configuration><property><name>yarn.nodemanager.aux-
 #### Step 9:修改 mapred-site.xml
 
 ```bash
-$cd /opt/hadoop/etc/hadoop/
+$sudo mapred-site.xml
 ```
+
+#### 新增
+
+```xml
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>mapreduce.framework.name</name><value>yarn</value></property></configuration>' >> /opt/hadoop/etc/hadoop/mapred-site.xml
+```
+
+#### 
 
 
 
