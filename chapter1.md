@@ -183,7 +183,7 @@ $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration
 $sudo mkdir -p /opt/hadoop/tmp
 $sudo mkdir -p /opt/hadoop/tmp/hdfs/name
 $sudo mkdir -p /opt/hadoop/tmp/hdfs/data
-$sudo chown -R ${USER_NAME}:${USER_NAME} /opt/hadoop/tmp
+$sudo chown -R ${USER}:${USER} /opt/hadoop/tmp
 ```
 
 
