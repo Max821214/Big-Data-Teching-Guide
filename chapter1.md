@@ -93,10 +93,28 @@ $sudo vim core-site.xml
 $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>fs.defaultFS</name><value>hdfs://localhost:9000</value></property><property><name>hadoop.tmp.dir</name><value>/opt/hadoop/tmp</value><description>A base for other temporary directories.</description></property></configuration>' >> /opt/hadoop/etc/hadoop/core-site.xml
 ```
 
-#### Step 5:進入 Hadoop 配置檔目錄
+#### Step 8:修改 yarn-site.xml
 
 ```bash
-$cd /opt/hadoop/etc/hadoop/
+$sudo yarn-site.xml
+```
+
+#### 新增
+
+```
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+</configuration>
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo '<?xml version="1.0"?><configuration><property><name>yarn.nodemanager.aux-services</name><value>mapreduce_shuffle</value></property></configuration>' >> /opt/hadoop/etc/hadoop/yarn-site.xml
 ```
 
 #### Step 5:進入 Hadoop 配置檔目錄
