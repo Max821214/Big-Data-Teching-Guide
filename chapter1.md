@@ -36,10 +36,14 @@ $sudo chmod -R 777 /opt/
 
 ### 配置 Hadoop 環境
 
-#### Step 5:進入 Hadoop 配置檔目錄
+#### Step 5:進入 Hadoop 配置檔目錄並刪除原有配置檔
 
 ```bash
 $cd /opt/hadoop/etc/hadoop/
+$sudo rm -rf core-site.xml
+$sudo rm -rf mapred-site.xml.template
+$sudo rm -rf hdfs-site.xml
+$sudo rm -rf yarn-site.xml
 ```
 
 #### Step 6:修改 hadoop-env.sh
@@ -60,10 +64,33 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 $echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hadoop/etc/hadoop/hadoop-env.sh
 ```
 
-#### Step 5:進入 Hadoop 配置檔目錄
+#### Step 7:修改 core-site.xml
 
 ```bash
-$cd /opt/hadoop/etc/hadoop/
+$sudo vim core-site.xml
+```
+
+#### 新增
+
+```
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/hadoop/tmp</value>
+        <description>A base for other temporary directories.</description>
+    </property>
+</configuration>
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>fs.defaultFS</name><value>hdfs://localhost:9000</value></property><property><name>hadoop.tmp.dir</name><value>/opt/hadoop/tmp</value><description>A base for other temporary directories.</description></property></configuration>' >> /opt/hadoop/etc/hadoop/core-site.xml
 ```
 
 #### Step 5:進入 Hadoop 配置檔目錄
