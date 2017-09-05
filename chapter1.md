@@ -98,7 +98,7 @@ $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration
 #### 手動新增
 
 ```bash
-$sudo yarn-site.xml
+$sudo vim yarn-site.xml
 ```
 
 ```xml
@@ -122,7 +122,7 @@ $echo '<?xml version="1.0"?><configuration><property><name>yarn.nodemanager.aux-
 #### 手動新增
 
 ```bash
-$sudo mapred-site.xml
+$sudo vim mapred-site.xml
 ```
 
 ```xml
@@ -146,7 +146,7 @@ $echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration
 #### 手動新增
 
 ```bash
-$sudo hdfs-site.xml
+$sudo vim hdfs-site.xml
 ```
 
 ```xml
