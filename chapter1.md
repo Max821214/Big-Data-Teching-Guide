@@ -222,6 +222,12 @@ $source ~/.bashrc
 
 #### Step 13:開啟 Hadoop 環境
 
+#### 初始化 Namenode
+
+```bash
+$/opt/hadoop/bin/hadoop namenode -format
+```
+
 #### 分別開啟
 
 ```bash
