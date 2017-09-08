@@ -1,5 +1,10 @@
 # Hadoop Single Node
 
+| 名稱 | 版本 |
+| :--- | :--- |
+| OS | ubuntu14.04 |
+| Hadoop | 2.7.3 |
+
 #### Step 1:新增 “ip 主機名稱”
 
 ```bash
