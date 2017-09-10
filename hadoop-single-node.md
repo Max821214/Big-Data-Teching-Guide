@@ -212,7 +212,7 @@ export PATH=$PATH:$HADOOP_BIN
 export HADOOP_HOME="/opt/hadoop"
 ```
 
-```
+```bash
 $echo "export HADOOP_HOME=\"/opt/hadoop\"" | sudo tee -a ~/.bashrc
 $echo "export PATH=\$PATH:\$HADOOP_HOME" | sudo tee -a ~/.bashrc
 $echo "export HADOOP_BIN=\"/opt/hadoop/bin\"" | sudo tee -a ~/.bashrc
