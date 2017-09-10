@@ -133,5 +133,11 @@ $jps
 3679 DataNode
 ```
 
+#### HBase Web UI
+
+```
+http://localhost:16010/
+```
+
 
 
