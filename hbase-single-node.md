@@ -20,7 +20,7 @@ $cd /opt/hbase/conf/
 $sudo rm -rf hbase-site.xml
 ```
 
-#### Step 3:建立環境變數
+#### Step 5:建立環境變數
 
 #### 手動寫入
 
