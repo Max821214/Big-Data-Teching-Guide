@@ -303,7 +303,7 @@ $hadoop fs -cat /input/test.txt
 
 #### Example 2:執行 word count 範例
 
-```
+```bash
 $hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount /input/test.txt /output
 ```
 
