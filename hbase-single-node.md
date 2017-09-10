@@ -116,5 +116,22 @@ $source ~/.bashrc
 $/opt/hbase/bin/start-hbase.sh
 ```
 
+### 測試是否安裝成功
+
+#### 查看程序是否開啟
+
+```
+$jps
+10308 HMaster
+4389 NodeManager
+4053 ResourceManager
+3494 NameNode
+10246 HQuorumPeer
+10441 HRegionServer
+11453 Jps
+3902 SecondaryNameNode
+3679 DataNode
+```
+
 
 
