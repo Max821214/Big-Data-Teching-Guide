@@ -226,7 +226,7 @@ $source ~/.bashrc
 #### 初始化 Namenode
 
 ```bash
-$/opt/hadoop/bin/hadoop namenode -format
+$/opt/hadoop/bin/hdfs namenode -format
 ```
 
 #### 分別開啟
