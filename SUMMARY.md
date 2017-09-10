@@ -7,5 +7,5 @@
 ## 實際安裝
 
 * [Hadoop Single Node](chapter1.md)
-* [HBase Single Node](hbase-single-node.md)
+* [Hbase Single Node](hbase-single-node.md)
 
