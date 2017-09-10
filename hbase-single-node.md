@@ -9,6 +9,7 @@ $cd /opt
 $sudo wget http://apache.stu.edu.tw/hbase/1.3.1/hbase-1.3.1-bin.tar.gz
 $sudo tar -xvf hbase-1.3.1-bin.tar.gz
 $sudo mv hbase-1.3.1 hbase
+$sudo chmod -R 777 /opt/
 ```
 
 ### 配置 HBase 環境
