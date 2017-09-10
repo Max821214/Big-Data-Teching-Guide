@@ -112,5 +112,9 @@ $source ~/.bashrc
 
 #### Step 6:開起 Hbase
 
+```
+$/opt/hbase/bin/start-hbase.sh
+```
+
 
 
