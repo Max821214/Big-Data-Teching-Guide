@@ -35,7 +35,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 #### 或者使用指令寫入配置檔
 
 ```bash
-$echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hadoop/etc/hadoop/hadoop-env.sh
+$echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hbase/conf/hbase-env.sh
 ```
 
 #### Step 5:建立環境變數
