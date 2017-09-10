@@ -169,5 +169,18 @@ put 'test', 'row3', 'cf:c', 'value3'
 scan 'test'
 ```
 
+#### get 數值
+
+```
+get 'test', 'row1'
+```
+
+#### 刪除 table （要先disable在drop）
+
+```
+disable 'test'
+drop 'test'
+```
+
 
 
