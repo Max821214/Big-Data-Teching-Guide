@@ -5,7 +5,7 @@
 #### Step 1:新增 “ip 主機名稱”
 
 ```bash
-$sudo vim /etc/hosts
+$sudo wget http://apache.mirror.gtcomm.net/hbase/stable/hbase-1.2.5-bin.tar.gz
 ```
 
 
