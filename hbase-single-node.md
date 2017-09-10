@@ -182,5 +182,11 @@ disable 'test'
 drop 'test'
 ```
 
+#### 關閉 HBase Shell
+
+```
+exit
+```
+
 
 
