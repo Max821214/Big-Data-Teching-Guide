@@ -11,7 +11,7 @@ $sudo tar -xvf hbase-1.3.1-bin.tar.gz
 $sudo mv hbase-1.3.1 hbase
 ```
 
-### 配置 Hadoop 環境
+### 配置 HBase 環境
 
 #### Step 2:進入 Hadoop 配置檔目錄並刪除原有配置檔
 
