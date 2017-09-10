@@ -28,10 +28,6 @@ export HBASE_MANAGES_ZK=true
 
 #### 或者指令寫入
 
-```
-export HADOOP_HOME="/opt/hadoop"
-```
-
 ```bash
 $echo "export HADOOP_HOME=\"/opt/hadoop\"" | sudo tee -a ~/.bashrc
 $echo "export PATH=\$PATH:\$HADOOP_HOME" | sudo tee -a ~/.bashrc
