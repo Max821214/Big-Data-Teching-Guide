@@ -38,6 +38,47 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 $echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hbase/conf/hbase-env.sh
 ```
 
+#### Step 4:修改 hbase-site.xml
+
+#### 手動新增
+
+```bash
+$sudo vim hbase-site.xml
+```
+
+```xml
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+        <name>hbase.rootdir</name>
+        <value>hdfs://localhost:9000/hbase</value>
+</property>
+<property>
+        <name>hbase.cluster.distributed</name>
+        <value>true</value>
+</property>
+<property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>localhost</value>
+</property>
+<property>
+        <name>dfs.replication</name>
+        <value>1</value>
+</property>
+<property>
+        <name>hbase.zookeeper.property.dataDir</name>
+        <value>/opt/hbase/zookeeper</value>
+</property>
+</configuration>
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo '<?xml version="1.0"?><configuration><property><name>yarn.nodemanager.aux-services</name><value>mapreduce_shuffle</value></property></configuration>' >> /opt/hadoop/etc/hadoop/yarn-site.xml
+```
+
 #### Step 5:建立環境變數
 
 #### 手動寫入
