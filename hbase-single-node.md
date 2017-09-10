@@ -2,10 +2,13 @@
 
 > 注意，安裝 Hbase 前須先確認 [Hadoop](https://max821214.gitbooks.io/teaching-guide/content/hadoop-single-node.html) 已安裝完成
 
-#### Step 1:新增 “ip 主機名稱”
+#### Step 1:下載 Hbase 壓縮檔
 
 ```bash
-$sudo wget http://apache.mirror.gtcomm.net/hbase/stable/hbase-1.2.5-bin.tar.gz
+$cd /opt
+$sudo wget http://apache.stu.edu.tw/hbase/1.3.1/hbase-1.3.1-bin.tar.gz
+$sudo tar -xvf hbase-1.3.1-bin.tar.gz
+$sudo mv hbase-1.3.1 hbase
 ```
 
 
