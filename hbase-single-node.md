@@ -20,6 +20,24 @@ $cd /opt/hbase/conf/
 $sudo rm -rf hbase-site.xml
 ```
 
+#### Step 3:修改 hbase-env.sh
+
+```bash
+$sudo vim hbase-env.sh
+```
+
+#### 新增
+
+```
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo 'export JAVA_HOME=/usr/lib/jvm/java-8-oracle' >> /opt/hadoop/etc/hadoop/hadoop-env.sh
+```
+
 #### Step 5:建立環境變數
 
 #### 手動寫入
@@ -49,8 +67,6 @@ $echo "export HBASE_MANAGES_ZK=true" | sudo tee -a ~/.bashrc
 ```bash
 $source ~/.bashrc
 ```
-
-#### 
 
 
 
