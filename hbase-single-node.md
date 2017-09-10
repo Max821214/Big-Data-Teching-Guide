@@ -29,10 +29,10 @@ export HBASE_MANAGES_ZK=true
 #### 或者指令寫入
 
 ```bash
-$echo "export HADOOP_HOME=\"/opt/hadoop\"" | sudo tee -a ~/.bashrc
-$echo "export PATH=\$PATH:\$HADOOP_HOME" | sudo tee -a ~/.bashrc
-$echo "export HADOOP_BIN=\"/opt/hadoop/bin\"" | sudo tee -a ~/.bashrc
-$echo "export PATH=\$PATH:\$HADOOP_BIN" | sudo tee -a ~/.bashrc
+$echo "export HBASE_HOME=\"/opt/hbase\"" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$PATH:\$HBASE_HOME" | sudo tee -a ~/.bashrc
+$echo "export HBASE_REGIONSERVERS=\"/opt/hbase/conf/regionservers\"" | sudo tee -a ~/.bashrc
+$echo "export HBASE_MANAGES_ZK=true | sudo tee -a ~/.bashrc
 ```
 
 #### 最後讀取環境變數
