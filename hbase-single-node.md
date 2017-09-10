@@ -11,6 +11,15 @@ $sudo tar -xvf hbase-1.3.1-bin.tar.gz
 $sudo mv hbase-1.3.1 hbase
 ```
 
+### 配置 Hadoop 環境
+
+#### Step 2:進入 Hadoop 配置檔目錄並刪除原有配置檔
+
+```bash
+$cd /opt/hbase/conf/
+$sudo rm -rf hbase-site.xml
+```
+
 #### Step 3:建立環境變數
 
 #### 手動寫入
@@ -32,7 +41,7 @@ export HBASE_MANAGES_ZK=true
 $echo "export HBASE_HOME=\"/opt/hbase\"" | sudo tee -a ~/.bashrc
 $echo "export PATH=\$PATH:\$HBASE_HOME" | sudo tee -a ~/.bashrc
 $echo "export HBASE_REGIONSERVERS=\"/opt/hbase/conf/regionservers\"" | sudo tee -a ~/.bashrc
-$echo "export HBASE_MANAGES_ZK=true | sudo tee -a ~/.bashrc
+$echo "export HBASE_MANAGES_ZK=true" | sudo tee -a ~/.bashrc
 ```
 
 #### 最後讀取環境變數
