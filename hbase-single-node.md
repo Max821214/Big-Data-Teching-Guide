@@ -122,12 +122,12 @@ $/opt/hbase/bin/start-hbase.sh
 
 ```
 $jps
-10308 HMaster
+10308 HMaster(Hbase)
 4389 NodeManager
 4053 ResourceManager
 3494 NameNode
-10246 HQuorumPeer
-10441 HRegionServer
+10246 HQuorumPeer(Hbase)
+10441 HRegionServer(Hbase)
 11453 Jps
 3902 SecondaryNameNode
 3679 DataNode
