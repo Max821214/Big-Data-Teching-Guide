@@ -11,5 +11,41 @@ $sudo tar -xvf hbase-1.3.1-bin.tar.gz
 $sudo mv hbase-1.3.1 hbase
 ```
 
+#### Step 3:建立環境變數
+
+#### 手動寫入
+
+```
+$sudo vim ~/.bashrc
+```
+
+```
+export HBASE_HOME="/opt/hbase/"
+export PATH=$PATH:$HBASE_HOME/bin
+export HBASE_REGIONSERVERS="/opt/hbase/conf/regionservers"
+export HBASE_MANAGES_ZK=true
+```
+
+#### 或者指令寫入
+
+```
+export HADOOP_HOME="/opt/hadoop"
+```
+
+```bash
+$echo "export HADOOP_HOME=\"/opt/hadoop\"" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$PATH:\$HADOOP_HOME" | sudo tee -a ~/.bashrc
+$echo "export HADOOP_BIN=\"/opt/hadoop/bin\"" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$PATH:\$HADOOP_BIN" | sudo tee -a ~/.bashrc
+```
+
+#### 最後讀取環境變數
+
+```bash
+$source ~/.bashrc
+```
+
+#### 
+
 
 
