@@ -40,7 +40,7 @@ $sudo mv hadoop-2.7.3 hadoop
 $sudo chmod -R 777 /opt/
 ```
 
-> #### 可至 [Hadoop](/ http://hadoop.apache.org/releases.html) 官網選擇版本安裝
+> #### 可至 [Hadoop](http://hadoop.apache.org/releases.html) 官網選擇版本安裝
 
 ### 配置 Hadoop 環境
 
