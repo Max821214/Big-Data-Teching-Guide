@@ -51,26 +51,26 @@ $sudo vim hbase-site.xml
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
-<property>
-        <name>hbase.rootdir</name>
-        <value>hdfs://localhost:9000/hbase</value>
-</property>
-<property>
-        <name>hbase.cluster.distributed</name>
-        <value>true</value>
-</property>
-<property>
-        <name>hbase.zookeeper.quorum</name>
-        <value>localhost</value>
-</property>
-<property>
-        <name>dfs.replication</name>
-        <value>1</value>
-</property>
-<property>
-        <name>hbase.zookeeper.property.dataDir</name>
-        <value>/opt/hbase/zookeeper</value>
-</property>
+        <property>
+                <name>hbase.rootdir</name>
+                <value>hdfs://localhost:9000/hbase</value>
+        </property>
+        <property>
+                <name>hbase.cluster.distributed</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.quorum</name>
+                <value>localhost</value>
+        </property>
+        <property>
+                <name>dfs.replication</name>
+                <value>1</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.property.dataDir</name>
+                <value>/opt/hbase/zookeeper</value>
+        </property>
 </configuration>
 ```
 
