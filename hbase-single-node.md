@@ -139,9 +139,7 @@ $jps
 http://localhost:16010/
 ```
 
-### 測試範例 {#測試範例}
-
-#### Example: {#example-1在本地端建立檔案，並上傳至-hdfs}
+### 測試範例
 
 #### 進入 hbase shell
 
