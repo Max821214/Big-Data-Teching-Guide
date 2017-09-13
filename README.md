@@ -36,7 +36,7 @@ Hadoop 有以下主要特色：
 
 * [Apache Hive](https://hive.apache.org/)：是構建於hadoop之上的資料倉儲框架。Hive 定義了簡單的類 SQL 查詢語言，稱為 HQL，透過 HiveQL 為用戶提供資料的歸納、查詢和分析等功能。Hive 起初是由 Facebook 所貢獻的。
 
-* [Apache Sqoop](http://sqoop.apache.org/)：是一種用於 Apache Hadoop 的 HDFS 和結構化數據存儲（如關係數據庫）之間高效率傳輸並轉換批次資料格式的工具。
+* [Apache Sqoop](http://sqoop.apache.org/)：是一種用於 Apache Hadoop 的 HDFS 和結構化資料存儲（如關係型資料庫）之間高效率傳輸並轉換批次資料格式的工具。
 
 
 
