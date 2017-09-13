@@ -15,7 +15,7 @@
 
 # Hadoop
 
-
+---
 
 **Apache Hadoop **是一款支援資料密集型分散式應用，並以Apache 2.0許可協議發佈的開源軟體框架。它支援在硬體建構的大型叢集上執行的應用程式。Hadoop 本來是Apache.org在Lucene下的一個專案，由Dong Cutting所開發，是一個開放源始碼的分散式計算系統的JAVA實作，用來處理與保存大量資料的雲端運算平台，目前是 Apache top-level 專案。Hadoop 主要由運算模組 MapResuce 和 分散式檔案系統 HDFS 所組成，是由 Google Map Reduce 及 GFS\(Google File System\) 延伸所開發出的工具。
 
@@ -29,8 +29,6 @@ Hadoop 有以下主要特色：
 * 高容錯性：Hadoop能夠自動保存數據的多個副本，並且能夠自動將失敗的任務重新分配。
 
 # Hadoop Ecosystem
-
-
 
 
 
