@@ -32,7 +32,7 @@ Hadoop 有以下主要特色：
 
 ---
 
-* Apache HBase：屬於 NoSQL 分散式的 Cloumn-Based Databases，是參考 Google 的 BigTable 衍生開發出的資料庫。主要架構在 HDFS 檔案系統之上，提供類似 BigTable 的一些服務，並擁有 BigTable 的一些特性，如：容錯性、疏離性等等。
+* Apache HBase：屬於 NoSQL 分散式的 Cloumn-Based Databases，是參考 Google 的 BigTable 衍生開發出的資料庫。主要架構在 HDFS 檔案系統之上，可以對大量資料做快速的隨機儲存（fast random access），並擁有 BigTable 的一些特性，如：分散式、疏離性，以及多維度映射（persistent multidimensional sorted map）等等。
 
 * Apache Hive：構建於hadoop之上的資料倉儲，通過一種類 SQL 語言HiveQL為用戶提供資料的歸納、查詢和分析等功能。Hive最初由 Facebook 貢獻。
 
