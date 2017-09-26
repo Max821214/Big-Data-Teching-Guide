@@ -15,7 +15,19 @@ $sudo mv sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop
 
 ### 配置 Sqoop 環境
 
-#### Step 2:配置環境變數手動寫入
+#### Step 3:進入 Sqoop 配置檔目錄
+
+```bash
+$cd sqoop/conf/
+```
+
+#### Step 4:修改 sqoop-env.sh
+
+```
+$sudo mv sqoop-env-template.sh sqoop-env.sh
+```
+
+#### Step 5:配置環境變數手動寫入
 
 ```
 $sudo vim ~/.bashrc
