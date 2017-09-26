@@ -83,11 +83,9 @@ $sqoop-version
 ...
 ...
 Sqoop 1.4.6
-git commit id c0c5a81723759fa575844a0a1eae8f510fa32c25
+git commit id ......
 Compiled by root on Mon Apr 27 14:38:36 CST 2015
 ```
-
-
 
 
 
