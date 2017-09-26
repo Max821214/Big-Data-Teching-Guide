@@ -43,7 +43,15 @@ $echo 'export HADOOP_COMMON_HOME=/opt/hadoop' >> /opt/sqoop/conf/sqoop-env.sh
 $echo 'export HADOOP_MAPRED_HOME=/opt/hadoop' >> /opt/sqoop/conf/sqoop-env.sh
 ```
 
-#### Step 5:配置環境變數手動寫入
+#### Step 5:下載 **mysql-connector-java-xx.jar 並**加入 **/opt/sqoop/lib/**
+
+```
+$cd
+$sudo wget http://ftp.ntu.edu.tw/MySQL/Downloads/Connector-J/
+$sudo mv mysql-connector-java-5.1.25-bin.jar /opt/sqoop/lib/
+```
+
+#### Step 6:配置環境變數手動寫入
 
 ```
 $sudo vim ~/.bashrc
