@@ -99,7 +99,7 @@ export HBASE_MANAGES_ZK=true
 
 ```bash
 $echo "export HBASE_HOME=\"/opt/hbase\"" | sudo tee -a ~/.bashrc
-$echo "export PATH=\$PATH:\$HBASE_HOME" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$PATH:\$HBASE_HOME/bin" | sudo tee -a ~/.bashrc
 $echo "export HBASE_REGIONSERVERS=\"/opt/hbase/conf/regionservers\"" | sudo tee -a ~/.bashrc
 $echo "export HBASE_MANAGES_ZK=true" | sudo tee -a ~/.bashrc
 ```
