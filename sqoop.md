@@ -8,6 +8,7 @@
 #### Step 1:下載 Sqoop 壓縮檔
 
 ```bash
+$cd /opt
 $sudo wget http://mirrors.ibiblio.org/apache/sqoop/1.4.6/sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz
 $sudo tar -xvf sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz
 $sudo mv sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop
@@ -18,13 +19,28 @@ $sudo mv sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop
 #### Step 3:進入 Sqoop 配置檔目錄
 
 ```bash
-$cd sqoop/conf/
+$cd /opt/sqoop/conf/
 ```
 
 #### Step 4:修改 sqoop-env.sh
 
 ```
 $sudo mv sqoop-env-template.sh sqoop-env.sh
+$sudo vim sqoop-env.sh
+```
+
+#### 新增
+
+```
+export HADOOP_COMMON_HOME=/opt/hadoop
+export HADOOP_MAPRED_HOME=/opt/hadoop
+```
+
+#### 或者使用指令寫入配置檔
+
+```bash
+$echo 'export HADOOP_COMMON_HOME=/opt/hadoop' >> /opt/sqoop/conf/sqoop-env.sh
+$echo 'export HADOOP_MAPRED_HOME=/opt/hadoop' >> /opt/sqoop/conf/sqoop-env.sh
 ```
 
 #### Step 5:配置環境變數手動寫入
