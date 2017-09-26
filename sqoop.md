@@ -75,5 +75,19 @@ $echo "export PATH=\$PATH:\$SQOOP_HOME/bin" | sudo tee -a ~/.bashrc
 $source ~/.bashrc
 ```
 
+### 測試是否安裝成功
+
+```
+$sqoop-version
+...
+...
+...
+Sqoop 1.4.6
+git commit id c0c5a81723759fa575844a0a1eae8f510fa32c25
+Compiled by root on Mon Apr 27 14:38:36 CST 2015
+```
+
+
+
 
 
