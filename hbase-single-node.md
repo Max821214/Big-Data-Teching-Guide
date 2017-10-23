@@ -14,7 +14,7 @@ $sudo chmod -R 777 /opt/
 
 ### 配置 HBase 環境
 
-#### Step 2:進入 Hadoop 配置檔目錄並刪除原有配置檔
+#### Step 2:進入 HBase 配置檔目錄並刪除原有配置檔
 
 ```bash
 $cd /opt/hbase/conf/
@@ -77,7 +77,7 @@ $sudo vim hbase-site.xml
 #### 或者使用指令寫入配置檔
 
 ```bash
-$echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>hbase.rootdir</name><value>hdfs://localhost:9000/hbase</value></property><property><name>hbase.cluster.distributed</name><value>true</value></property><property><name>hbase.zookeeper.quorum</name><value>localhost</value></property><property><name>dfs.replication</name><value>1</value></property><property><name>hbase.zookeeper.property.dataDir</name><value>/opt/hbase/zookeeper</value></property></configuration>' >> /opt/hadoop/etc/hadoop/yarn-site.xml
+$echo '<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>hbase.rootdir</name><value>hdfs://localhost:9000/hbase</value></property><property><name>hbase.cluster.distributed</name><value>true</value></property><property><name>hbase.zookeeper.quorum</name><value>localhost</value></property><property><name>dfs.replication</name><value>1</value></property><property><name>hbase.zookeeper.property.dataDir</name><value>/opt/hbase/zookeeper</value></property></configuration>' >> /opt/hbase/conf/hbase-site.xml
 ```
 
 #### Step 5:建立環境變數
