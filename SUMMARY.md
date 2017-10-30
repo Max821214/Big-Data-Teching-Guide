@@ -4,9 +4,12 @@
 
 * [Introduction](README.md)
 
-## 實際安裝
+## BigData 相關工具安裝
 
 * [Hadoop Single Node](hadoop-single-node.md)
-* [Hbase Single Node](hbase-single-node.md)
 * [Sqoop](sqoop.md)
+
+## NoSQL  安裝
+
+* [Hbase Single Node](hbase-single-node.md)
 
