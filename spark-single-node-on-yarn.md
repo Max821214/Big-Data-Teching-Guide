@@ -14,8 +14,8 @@
 ```bash
 $cd /opt
 $sudo wget http://archive.apache.org/dist/spark/spark-2.0.0/spark-2.0.0-bin-hadoop2.7.tgz
-$sudo tar -xvf hbase-1.3.1-bin.tar.gz
-$sudo mv hbase-1.3.1 hbase
+$sudo tar -xvf spark-2.0.0-bin-hadoop2.7.tgz
+$sudo mv spark-2.0.0-bin-hadoop2.7 spark
 $sudo chmod -R 777 /opt/
 ```
 
