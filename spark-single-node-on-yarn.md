@@ -42,11 +42,40 @@ export PATH=$SPARK_HOME/bin:$PATH
 
 ### 指令新增
 
-```
+```bash
 $echo "export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark/conf/spark-env.sh
 $echo "export YARN_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark/conf/spark-env.sh
 $echo "export SPARK_HOME=/opt/spark" | sudo tee -a /opt/spark/conf/spark-env.sh
 $echo "export PATH=\$SPARK_HOME/bin:\$PATH" | sudo tee -a /opt/spark/conf/spark-env.sh
+```
+
+#### Step 3:建立環境變數 {#step-12建立環境變數}
+
+#### 手動寫入 {#手動寫入}
+
+```bash
+$sudo vim ~/.bashrc
+```
+
+```
+export HADOOP_HOME="/opt/hadoop"
+export PATH=$PATH:$HADOOP_HOME
+export HADOOP_BIN="/opt/hadoop/bin"
+export PATH=$PATH:$HADOOP_BIN
+
+```
+
+#### 或者指令寫入 {#或者指令寫入}
+
+```bash
+$echo "export SPARK_HOME=/opt/spark" | sudo tee -a ~/.bashrc
+$echo "export PATH=\$SPARK_HOME/bin:\$PATH" | sudo tee -a ~/.bashrc
+```
+
+#### 最後讀取環境變數 {#最後讀取環境變數}
+
+```bash
+$source ~/.bashrc
 ```
 
 
