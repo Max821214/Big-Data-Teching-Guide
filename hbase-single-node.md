@@ -115,7 +115,7 @@ $echo "export HBASE_MANAGES_ZK=true" | sudo tee -a ~/.bashrc
 $source ~/.bashrc
 ```
 
-#### Step 6:開起 Hbase
+#### Step 6:啟動 Hbase
 
 ```
 $/opt/hbase/bin/start-hbase.sh

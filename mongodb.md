@@ -30,12 +30,10 @@ $sudo apt-get update
 |  |  |
 | :--- | :--- |
 | mongodb-org | 這是一個 meta package，包含了以下四個 MongoDB 的套件 |
-| mongodb-org-server |  mongod 程序的相關設定 |
+| mongodb-org-server | mongod 程序的相關設定 |
 | mongodb-org-mongos | mongos 程序 |
 | mongodb-org-shell | mongo 的 shell |
 | mongodb-org-tools | 包含其餘 MongoDB 工具，如mongodump、mongoexport 等 |
-
-
 
 ```
 $sudo apt-get install -y mongodb-org
@@ -45,6 +43,12 @@ $sudo apt-get install -y mongodb-org
 
 ```
 $sudo apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-shell=3.0.0 mongodb-org-mongos=3.0.0 mongodb-org-tools=3.0.0
+```
+
+#### Step 5:啟動 MongoDB
+
+```
+$sudo apt-get update
 ```
 
 
