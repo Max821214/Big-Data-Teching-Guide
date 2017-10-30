@@ -25,17 +25,27 @@ $sudo apt-get update
 
 #### Step 4:安裝 MongoDB
 
+#### 套件介紹
+
+|  |  |
+| :--- | :--- |
+| mongodb-org | 這是一個 meta package，包含了以下四個 MongoDB 的套件 |
+| mongodb-org-server |  mongod 程序的相關設定 |
+| mongodb-org-mongos | mongos 程序 |
+| mongodb-org-shell | mongo 的 shell |
+| mongodb-org-tools | 包含其餘 MongoDB 工具，如mongodump、mongoexport 等 |
+
+
+
 ```
 $sudo apt-get install -y mongodb-org
 ```
 
-| 套件名稱 |  |
-| :--- | :--- |
-| mongodb-org | 這是一個 meta package，包含了以下四個 MongoDB 的套件 |
-| mongodb-org-server |  |
-| mongodb-org-mongos |  |
-| mongodb-org-shell |  |
-| mongodb-org-tools |  |
+#### 也可選擇版本安裝
+
+```
+$sudo apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-shell=3.0.0 mongodb-org-mongos=3.0.0 mongodb-org-tools=3.0.0
+```
 
 
 
