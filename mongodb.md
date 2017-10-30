@@ -48,7 +48,7 @@ $sudo apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-
 #### Step 5:啟動 MongoDB
 
 ```
-$sudo apt-get update
+$sudo service mongod start
 ```
 
 ### 測試是否安裝成功
@@ -77,10 +77,6 @@ build environment:
     distarch: x86_64
     target_arch: x86_64
 ```
-
-
-
-
 
 
 
