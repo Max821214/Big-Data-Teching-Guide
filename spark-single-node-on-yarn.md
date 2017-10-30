@@ -77,7 +77,7 @@ $source ~/.bashrc
 
 ### 驗證安裝成功 {#配置-hadoop-環境}
 
-#### Example :Run Spark example jar
+#### Example :執行 Spark 提供的 example jar
 
 ```
 $spark-submit --class org.apache.spark.examples.SparkPi --master local[2] /opt/spark/examples/jars/spark-examples_2.11-2.0.0.jar
