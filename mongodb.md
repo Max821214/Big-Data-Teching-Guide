@@ -23,11 +23,19 @@ $echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/
 $sudo apt-get update
 ```
 
-#### Step 4:安裝 MongoDB 
+#### Step 4:安裝 MongoDB
 
 ```
 $sudo apt-get install -y mongodb-org
 ```
+
+| 套件名稱 |  |
+| :--- | :--- |
+| mongodb-org |  |
+| mongodb-org-server |  |
+| mongodb-org-mongos |  |
+| mongodb-org-shell |  |
+| mongodb-org-tools |  |
 
 
 
