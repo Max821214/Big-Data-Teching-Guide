@@ -24,7 +24,23 @@ $sudo chown ${USER_NAME}:${USER_NAME} -R /opt/spark
 
 #### Step 2:進入Spark 配置目錄下配置 spark-env.sh {#step-5進入-hadoop-配置檔目錄並刪除原有配置檔}
 
-本範例中配置 Hadoop 配置目錄位置以及 Spark 路徑 
+> 本範例中配置 Hadoop 配置目錄位置以及 Spark 路徑
+
+### 手動新增
+
+```bash
+$sudo mv spark-env.sh.template spark-env.sh
+$sudo vim spark-env.sh
+```
+
+```
+export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=\$HADOOP_HOME/etc/hadoop
+export SPARK_HOME=/opt/spark
+export PATH=\$SPARK_HOME/bin:\$PATH
+```
+
+指令新增
 
 ```
 $echo "export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark/conf/spark-env.sh
