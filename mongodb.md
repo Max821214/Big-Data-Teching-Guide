@@ -27,7 +27,7 @@ $sudo apt-get update
 
 #### 套件介紹
 
-|  |  |
+| 套件名稱 | 介紹 |
 | :--- | :--- |
 | mongodb-org | 這是一個 meta package，包含了以下四個 MongoDB 的套件 |
 | mongodb-org-server | mongod 程序的相關設定 |
