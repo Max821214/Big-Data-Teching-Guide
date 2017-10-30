@@ -3,7 +3,7 @@
 | 名稱 | 版本 |
 | :--- | :--- |
 | OS | ubuntu14.04 |
-| Hadoop | 2.7.4 |
+| Hadoop | 2.7.3 |
 
 #### Step 1:新增 “ip 主機名稱”
 
@@ -34,9 +34,9 @@ $cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
 ```bash
 $cd /opt
-$sudo wget http://ftp.twaren.net/Unix/Web/apache/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz
-$sudo tar -xvf hadoop-2.7.4.tar.gz
-$sudo mv hadoop-2.7.4 hadoop
+$sudo wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+$sudo tar -xvf hadoop-2.7.3.tar.gz
+$sudo mv hadoop-2.7.3 hadoop
 $sudo chmod -R 777 /opt/
 ```
 
