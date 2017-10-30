@@ -2,6 +2,11 @@
 
 > 注意，安裝 Hbase 前須先確認 [Hadoop](https://max821214.gitbooks.io/teaching-guide/content/hadoop-single-node.html) 已安裝完成
 
+| 名稱 | 版本 |
+| :--- | :--- |
+| OS | Ubuntu 14.04 |
+| HBase | 1.3.1 |
+
 #### Step 1:下載 Hbase 壓縮檔
 
 ```bash
