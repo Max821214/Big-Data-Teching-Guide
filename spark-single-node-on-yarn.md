@@ -40,7 +40,7 @@ export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH
 ```
 
-### 指令新增
+#### 指令新增
 
 ```bash
 $echo "export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark/conf/spark-env.sh
@@ -73,6 +73,18 @@ $echo "export PATH=\$SPARK_HOME/bin:\$PATH" | sudo tee -a ~/.bashrc
 
 ```bash
 $source ~/.bashrc
+```
+
+### 驗證安裝成功 {#配置-hadoop-環境}
+
+#### Example :Run Spark example jar
+
+```
+$spark-submit --class org.apache.spark.examples.SparkPi --master local[2] /opt/spark/examples/jars/spark-examples_2.11-2.0.0.jar
+...
+...
+Pi is roughly 3.145355726778634
+...
 ```
 
 
