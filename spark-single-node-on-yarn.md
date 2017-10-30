@@ -58,11 +58,8 @@ $sudo vim ~/.bashrc
 ```
 
 ```
-export HADOOP_HOME="/opt/hadoop"
-export PATH=$PATH:$HADOOP_HOME
-export HADOOP_BIN="/opt/hadoop/bin"
-export PATH=$PATH:$HADOOP_BIN
-
+export SPARK_HOME="/opt/spark"
+export PATH=$SPARK_HOME/bin:$PATH
 ```
 
 #### 或者指令寫入 {#或者指令寫入}
