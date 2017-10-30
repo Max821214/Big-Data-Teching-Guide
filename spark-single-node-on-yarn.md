@@ -34,10 +34,10 @@ $sudo vim spark-env.sh
 ```
 
 ```
-export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop
-export YARN_CONF_DIR=\$HADOOP_HOME/etc/hadoop
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export SPARK_HOME=/opt/spark
-export PATH=\$SPARK_HOME/bin:\$PATH
+export PATH=$SPARK_HOME/bin:$PATH
 ```
 
 指令新增
