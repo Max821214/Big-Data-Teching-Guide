@@ -19,7 +19,7 @@ $echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/
 
 #### Step 3:更新本地套件庫
 
-```
+```bash
 $sudo apt-get update
 ```
 
@@ -35,19 +35,19 @@ $sudo apt-get update
 | mongodb-org-shell | mongo 的 shell |
 | mongodb-org-tools | 包含其餘 MongoDB 工具，如mongodump、mongoexport 等 |
 
-```
+```bash
 $sudo apt-get install -y mongodb-org
 ```
 
 #### 也可選擇版本安裝
 
-```
+```bash
 $sudo apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-shell=3.0.0 mongodb-org-mongos=3.0.0 mongodb-org-tools=3.0.0
 ```
 
 #### Step 5:啟動 MongoDB
 
-```
+```bash
 $sudo service mongod start
 ```
 
@@ -57,7 +57,7 @@ $sudo service mongod start
 
 可以查看 **/var/log/mongodb/mongod.log**
 
-```
+```bash
 $cat /var/log/mongodb/mongod.log
 ...
 2017-10-30T02:25:32.701+0000 I NETWORK  [thread1] waiting for connections on port 27017
@@ -65,7 +65,7 @@ $cat /var/log/mongodb/mongod.log
 
 #### 查看 MongoDB 版本
 
-```
+```bash
 $mongod version
 db version v3.4.10
 git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
