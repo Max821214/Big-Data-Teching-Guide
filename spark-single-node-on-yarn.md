@@ -65,7 +65,7 @@ export PATH=$SPARK_HOME/bin:$PATH
 #### 或者指令寫入 {#或者指令寫入}
 
 ```bash
-$echo "export SPARK_HOME=\"/opt/spark"" | sudo tee -a ~/.bashrc
+$echo "export SPARK_HOME=\"/opt/spark\"" | sudo tee -a ~/.bashrc
 $echo "export PATH=\$SPARK_HOME/bin:\$PATH" | sudo tee -a ~/.bashrc
 ```
 
