@@ -51,5 +51,36 @@ $sudo apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-
 $sudo apt-get update
 ```
 
+### 測試是否安裝成功
+
+#### 驗證 MongoDB 成功開啟
+
+可以查看 **/var/log/mongodb/mongod.log**
+
+```
+$cat /var/log/mongodb/mongod.log
+...
+2017-10-30T02:25:32.701+0000 I NETWORK  [thread1] waiting for connections on port 27017
+```
+
+#### 查看 MongoDB 版本
+
+```
+$mongod version
+db version v3.4.10
+git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1404
+    distarch: x86_64
+    target_arch: x86_64
+```
+
+
+
+
+
 
 
