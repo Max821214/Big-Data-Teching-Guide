@@ -31,7 +31,7 @@ $sudo apt-get install -y mongodb-org
 
 | 套件名稱 |  |
 | :--- | :--- |
-| mongodb-org |  |
+| mongodb-org | 這是一個 meta package，包含了以下四個 MongoDB 的套件 |
 | mongodb-org-server |  |
 | mongodb-org-mongos |  |
 | mongodb-org-shell |  |
