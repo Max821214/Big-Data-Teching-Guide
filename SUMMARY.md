@@ -8,6 +8,7 @@
 
 * [Hadoop Single Node](hadoop-single-node.md)
 * [Sqoop](sqoop.md)
+* Spark Single Node \(on Yarn\)
 
 ## NoSQL  安裝
 
