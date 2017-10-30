@@ -40,7 +40,7 @@ export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH
 ```
 
-指令新增
+### 指令新增
 
 ```
 $echo "export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark/conf/spark-env.sh
