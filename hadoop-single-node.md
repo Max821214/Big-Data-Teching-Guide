@@ -35,7 +35,7 @@ $cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```bash
 $cd /opt
 $sudo wget http://ftp.twaren.net/Unix/Web/apache/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz
-$sudo tar -xvf  hadoop-2.7.4.tar.gz
+$sudo tar -xvf hadoop-2.7.4.tar.gz
 $sudo mv hadoop-2.7.3 hadoop
 $sudo chmod -R 777 /opt/
 ```
