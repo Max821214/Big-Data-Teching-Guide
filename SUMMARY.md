@@ -12,5 +12,5 @@
 ## NoSQL  安裝
 
 * [Hbase Single Node](hbase-single-node.md)
-* MongoDB
+* [MongoDB](mongodb.md)
 
