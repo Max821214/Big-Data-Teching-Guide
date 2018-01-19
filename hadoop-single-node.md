@@ -32,10 +32,10 @@ $java -version
 
 ```bash
 $cd /opt
-$sudo wget http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz
-$sudo mkdir /lib/jvm
-$tar -zxvf jdk-8u161-linux-x64.tar.gz -C /lib/jvm
-$java -version
+$wget http://ftp.heanet.ie/mirrors/funtoo/distfiles/oracle-java/jdk-8u144-linux-x64.tar.gz
+$sudo mkdir /usr/lib/jvm/
+$sudo tar -zxvf jdk-8u144-linux-x64.tar.gz -C /usr/lib/jvm/
+$sudo mv jdk1.8.0_144/ java-8-oracle
 ```
 
 ##### 設定環境變數
@@ -45,7 +45,7 @@ $sudo vim /etc/profile
 ```
 
 ```bash
-export JAVA_HOME=/lib/jvm/jdk1.8.0_161
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export JRE_HOME=${JAVA_HOME}/jre   
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib   
 export PATH=${JAVA_HOME}/bin:$PATH
@@ -94,6 +94,8 @@ $sudo vim hadoop-env.sh
 ```
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
+
+#### 
 
 #### 或者使用指令寫入配置檔
 
