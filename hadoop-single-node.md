@@ -13,6 +13,8 @@ $sudo vim /etc/hosts
 
 #### Step 2:安裝 JDK 環境
 
+##### 2.1 自動安裝
+
 ```bash
 $sudo add-apt-repository -y ppa:webupd8team/java
 $sudo apt-get update
@@ -24,6 +26,8 @@ $java -version
 
 ##### 若出現問題，請用手動安裝 JDK
 
+##### 2.2 手動安裝
+
 至 [Oracle 官網](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下載 JDK
 
 ```bash
@@ -32,6 +36,19 @@ $sudo wget http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be455
 $sudo mkdir /lib/jvm
 $tar -zxvf jdk-8u161-linux-x64.tar.gz -C /lib/jvm
 $java -version
+```
+
+##### 設定環境變數
+
+```
+$sudo vim /etc/profile
+```
+
+```bash
+export JAVA_HOME=/lib/jvm/jdk1.8.0_161
+export JRE_HOME=${JAVA_HOME}/jre   
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib   
+export PATH=${JAVA_HOME}/bin:$PATH
 ```
 
 #### Step 3:安裝並新增 SSH key
