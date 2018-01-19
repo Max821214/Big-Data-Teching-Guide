@@ -28,8 +28,6 @@ $java -version
 
 ##### 2.2 手動安裝
 
-至 [Oracle 官網](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下載 JDK
-
 ```bash
 $cd /opt
 $wget http://ftp.heanet.ie/mirrors/funtoo/distfiles/oracle-java/jdk-8u144-linux-x64.tar.gz
