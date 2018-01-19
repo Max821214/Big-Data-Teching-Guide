@@ -22,6 +22,18 @@ $sudo apt-get install -y oracle-java8-installer
 $java -version
 ```
 
+##### 若出現問題，請用手動安裝 JDK
+
+至 [Oracle 官網](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下載 JDK
+
+```bash
+$cd /opt
+$mv ~/jdk-8u161-linux-x64.tar.gz /opt
+$sudo mkdir /lib/jvm
+$tar -zxvf jdk-8u161-linux-x64.tar.gz -C /lib/jvm
+$java -version
+```
+
 #### Step 3:安裝並新增 SSH key
 
 ```bash
