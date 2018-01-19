@@ -51,6 +51,12 @@ export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 ```
 
+#### 測試 jdk 是否設定完成
+
+```
+$java -version
+```
+
 #### Step 3:安裝並新增 SSH key
 
 ```bash
