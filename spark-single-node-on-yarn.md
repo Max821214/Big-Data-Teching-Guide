@@ -16,13 +16,17 @@ $cd /opt
 $sudo wget http://archive.apache.org/dist/spark/spark-2.0.0/spark-2.0.0-bin-hadoop2.7.tgz
 $sudo tar -xvf spark-2.0.0-bin-hadoop2.7.tgz
 $sudo mv spark-2.0.0-bin-hadoop2.7 spark
-$sudo chmod -R 777 /opt/
+$sudo chmod -R 777 /opt/spark
 $sudo chown ${USER_NAME}:${USER_NAME} -R /opt/spark
 ```
 
 ### 配置 Spark 環境 {#配置-hadoop-環境}
 
 #### Step 2:進入Spark 配置目錄下配置 spark-env.sh {#step-5進入-hadoop-配置檔目錄並刪除原有配置檔}
+
+```
+$cd /opt/spark/conf
+```
 
 > 本範例中配置 Hadoop 配置目錄位置以及 Spark 路徑
 
