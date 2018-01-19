@@ -73,7 +73,7 @@ $cd /opt
 $sudo wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
 $sudo tar -xvf hadoop-2.7.3.tar.gz
 $sudo mv hadoop-2.7.3 hadoop
-$sudo chmod -R 777 /opt/
+$sudo chmod -R 777 /opt/hadoop
 ```
 
 > #### 可至 [Hadoop](http://hadoop.apache.org/releases.html) 官網選擇版本安裝
