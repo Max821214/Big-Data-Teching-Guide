@@ -36,6 +36,8 @@ $sudo tar -zxvf jdk-8u144-linux-x64.tar.gz -C /usr/lib/jvm/
 $sudo mv jdk1.8.0_144/ java-8-oracle
 ```
 
+> 可至 [Oracle 官網](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下載 JDK
+
 ##### 設定環境變數
 
 ```
