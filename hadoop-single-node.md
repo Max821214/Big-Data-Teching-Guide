@@ -51,14 +51,10 @@ export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 ```
 
+測試 jdk 是否設定完成
+
 ```
 $source /etc/profile
-$java -version
-```
-
-#### 測試 jdk 是否設定完成
-
-```
 $java -version
 ```
 
