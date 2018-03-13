@@ -15,11 +15,11 @@ $sudo vim /etc/hosts
 # 192.168.0.3 slave2
 ```
 
-#### Step 2:安裝 JDK 環境 {#step-2安裝-jdk-環境}
+#### Step 2:安裝 JDK 環境\(三台主機\) {#step-2安裝-jdk-環境}
 
 ##### 2.1 自動安裝 {#21-自動安裝}
 
-```
+```bash
 $sudo
  add-apt-repository -y ppa:webupd8team/java
 
@@ -41,14 +41,13 @@ $sudo
 
 $java
  -version
-
 ```
 
 ##### 若出現問題，請用手動安裝 JDK {#若出現問題，請用手動安裝-jdk}
 
 ##### 2.2 手動安裝 {#22-手動安裝}
 
-```
+```bash
 $cd
  /opt
 
@@ -63,19 +62,17 @@ $sudo
 
 $sudo
  mv /usr/lib/jvm/jdk1.8.0_144 /usr/lib/jvm/java-8-oracle
-
 ```
 
 > 可至[Oracle 官網](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下載 JDK
 
 ##### 設定環境變數 {#設定環境變數}
 
-```
+```bash
 $sudo vim /etc/profile
-
 ```
 
-```
+```bash
 export
  JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
@@ -100,22 +97,30 @@ $PATH
 
 ##### 測試 jdk 是否設定完成 {#測試-jdk-是否設定完成}
 
-```
+```bash
 $source /etc/profile
 $java -version
 ```
 
 #### Step 3:安裝並新增 SSH key\(三台主機\) {#step-3安裝並新增-ssh-key}
 
-```
+```bash
 $sudo apt-get install -y openssh-server
 
 $ssh-keygen
-
-$cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
-
 ```
 
-  
+到每台機器上把`~/.ssh/id_rsa.pub` 到 master 節點
+
+```bash
+$cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+```
+
+到每台機器上把`authorized_keys` 發到每個節點
+
+```bash
+$cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+```
+
 
 
