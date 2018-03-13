@@ -7,8 +7,9 @@
 ## BigData 相關工具安裝
 
 * [Hadoop Single Node](hadoop-single-node.md)
-* [Sqoop](sqoop.md)
 * [Spark Single Node \(on Yarn\)](spark-single-node-on-yarn.md)
+* [Sqoop](sqoop.md)
+* [Spark Cluster \(on Yarn\)](spark-cluster-on-yarn.md)
 
 ## NoSQL  安裝
 
