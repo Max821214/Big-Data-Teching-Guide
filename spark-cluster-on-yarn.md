@@ -25,24 +25,15 @@ $sudo vim /etc/hosts
 $sudo
  add-apt-repository -y ppa:webupd8team/java
 
-$sudo
- apt-get update
+$sudo apt-get update
 
-$echo
- debconf shared/accepted-oracle-license-v1-1 select 
-true
- | sudo debconf-set-selections
+$echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 
-$echo
- debconf shared/accepted-oracle-license-v1-1 seen 
-true
- | sudo debconf-set-selections
+$echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 
-$sudo
- apt-get install -y oracle-java8-installer
+$sudo apt-get install -y oracle-java8-installer
 
-$java
- -version
+$java -version
 ```
 
 ##### 若出現問題，請用手動安裝 JDK {#若出現問題，請用手動安裝-jdk}
@@ -75,26 +66,13 @@ $sudo vim /etc/profile
 ```
 
 ```bash
-export
- JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
-export
- JRE_HOME=
-${JAVA_HOME}
-/jre   
+export JRE_HOME=${JAVA_HOME}/jre   
 
-export
- CLASSPATH=.:
-${JAVA_HOME}
-/lib:
-${JRE_HOME}
-/lib   
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib   
 
-export
- PATH=
-${JAVA_HOME}
-/bin:
-$PATH
+export PATH=${JAVA_HOME}/bin:$PATH
 ```
 
 ##### 測試 jdk 是否設定完成 {#測試-jdk-是否設定完成}
@@ -405,7 +383,17 @@ http://localhost:50070/
 
 ### 配置 Spark 環境 {#測試是否安裝成功}
 
-#### Step 1:下載 Hadoop 壓縮檔\(Master\) {#step-4下載-hadoop-壓縮檔}
+#### Step 1:下載 Spark 壓縮檔\(Master\) {#step-4下載-hadoop-壓縮檔}
+
+```
+$cd/opt
+$sudo wget http://archive.apache.org/dist/spark/spark-2.0.0/spark-2.0.0-bin-hadoop2.7.tgz
+$sudo tar -xvf spark-2.0.0-bin-hadoop2.7.tgz
+$sudo mv spark-2.0.0-bin-hadoop2.7 spark
+$sudo chmod -R 777 /opt/spark
+$sudo chown
+${USER_NAME}:${USER_NAME} -R /opt/spark
+```
 
 
 
