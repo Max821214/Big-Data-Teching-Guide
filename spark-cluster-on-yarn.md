@@ -6,6 +6,8 @@
 | Hadoop | 2.7.3 |
 | Spark | 2.0.0 |
 
+### 主機配置 {#測試是否安裝成功}
+
 #### Step 1:新增 “ip 主機名稱” {#step-1新增-ip-主機名稱}
 
 ```bash
@@ -116,11 +118,44 @@ $ssh-keygen
 $cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ```
 
+改權限
+
+```
+$sudo chmod 600 ~/.ssh/authorized_keys
+```
+
 到每台機器上把`authorized_keys` 發到每個節點
 
 ```bash
-$cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+$scp ~/.ssh/authorized_keys spark@slave1:~/.ssh/
 ```
 
+測試每個主機是否能無密碼登入
+
+```bash
+$ssh master
+$ssh slave1
+$ssh slave2 
+```
+
+### 配置 Hadoop 環境 {#測試是否安裝成功}
+
+#### Step 1:下載 Hadoop 壓縮檔 {#step-4下載-hadoop-壓縮檔}
+
+```
+$cd /opt
+
+$sudovwget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+
+$sudo tar -xvf hadoop-2.7.3.tar.gz
+
+$sudo mv hadoop-2.7.3 hadoop
+
+$sudo chmod -R 777 /opt/hadoop
+```
+
+#### 可至[Hadoop](http://hadoop.apache.org/releases.html)官網選擇版本安裝 {#可至-hadoop-官網選擇版本安裝}
+
+  
 
 
