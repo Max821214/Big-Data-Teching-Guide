@@ -290,7 +290,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #### Step 10:把 Master 的檔案壓縮並送到 Slave 節點 {#step-7修改-core-sitexml}
 
-把 master 的 /opt/hadoop 的路徑內容壓縮
+#### 把 master 的 /opt/hadoop 的路徑內容壓縮
 
 ```bash
 $cd /opt
@@ -299,33 +299,14 @@ $scp hadoop.tgz slave1:~/ && ssh slave1 sudo mv ~/hadoop.tgz /opt
 $scp hadoop.tgz slave2:~/ && ssh slave2 sudo mv ~/hadoop.tgz /opt
 ```
 
-到每個 slave 節點把 `hadoop.tgz` 解壓縮到`/opt`
+#### 到每個 slave 節點把 `hadoop.tgz` 解壓縮到`/opt`
 
 ```bash
 $cd /opt
 $sudo tar -xvf hadoop.tgz
 ```
 
-#### Step 11:建立環境變數 {#step-12建立環境變數}
-
-```bash
-$sudo vim ~/.bashrc
-```
-
-```
-export HADOOP_HOME="/opt/hadoop"
-export PATH=$PATH:$HADOOP_HOME
-export HADOOP_BIN="/opt/hadoop/bin"
-export PATH=$PATH:$HADOOP_BIN
-```
-
-#### 最後讀取環境變數 {#最後讀取環境變數}
-
-```bash
-$source ~/.bashrc
-```
-
-#### Step 12:開啟 Hadoop 環境 {#step-13開啟-hadoop-環境}
+#### Step 11:開啟 Hadoop 環境 {#step-13開啟-hadoop-環境}
 
 #### 初始化 Namenode {#初始化-namenode}
 
@@ -346,7 +327,7 @@ $/opt/hadoop/sbin/start-yarn.sh
 $/opt/hadoop/sbin/start-all.sh
 ```
 
-#### Step 13:查看程序是否開啟 {#分別開啟}
+#### Step 12:查看程序是否開啟 {#分別開啟}
 
 ```bash
 $jps
@@ -393,6 +374,114 @@ $sudo mv spark-2.0.0-bin-hadoop2.7 spark
 $sudo chmod -R 777 /opt/spark
 $sudo chown
 ${USER_NAME}:${USER_NAME} -R /opt/spark
+```
+
+#### Step 2:進入Spark 配置目錄下配置 spark-env.sh {#step-5進入-hadoop-配置檔目錄並刪除原有配置檔}
+
+```bash
+$cd /opt/spark/conf
+$sudo mv spark-env.sh.template spark-env.sh
+$sudo vim spark-env.sh
+```
+
+```
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+SPARK_MASTER_IP=master
+```
+
+#### Step 3:修改 slaves {#step-7修改-core-sitexml}
+
+```bash
+$sudo cp slaves.template slaves
+$sudo vim slaves
+```
+
+```
+slave1
+slave2
+```
+
+#### Step 4:把 Master 的檔案壓縮並送到 Slave 節點 {#step-7修改-core-sitexml}
+
+#### 把 master 的 /opt/hadoop 的路徑內容壓縮
+
+```bash
+$cd /opt
+$sudo tar -czvf spark.tgz spark/
+$scp spark.tgz slave1:~/ && ssh slave1 sudo mv ~/spark.tgz /opt
+$scp spark.tgz slave2:~/ && ssh slave2 sudo mv ~/spark.tgz /opt
+```
+
+#### 到每個 slave 節點把 `hadoop.tgz` 解壓縮到`/opt`
+
+```bash
+$cd /opt
+$sudo tar -xvf spark.tgz
+```
+
+#### Step 5:開啟 Spark 環境 {#step-13開啟-hadoop-環境}
+
+```bash
+$/opt/spark/sbin/start-all.sh
+```
+
+#### Step 6:查看程序是否開啟 {#分別開啟}
+
+```bash
+$jps
+```
+
+#### master
+
+```
+10180 Master
+9413 SecondaryNameNode
+9208 NameNode
+9564 ResourceManager
+4957 Jps
+```
+
+#### slave
+
+```
+10161 Worker
+9650 DataNode
+11498 Jps
+9773 NodeManager
+```
+
+#### Spark  Web UI {#hadoop-resourcemanager-web-ui}
+
+```
+http://master:8080/
+```
+
+#### Step 7:建立環境變數 {#step-12建立環境變數}
+
+```bash
+$sudo vim ~/.bashrc
+```
+
+```
+# Hadoop
+export HADOOP_HOME="/opt/hadoop"
+export PATH=$PATH:$HADOOP_HOME
+export HADOOP_BIN="/opt/hadoop/bin"
+export PATH=$PATH:$HADOOP_BIN
+
+# Spark
+export SPARK_HOME="/opt/spark"
+export PATH=$SPARK_HOME/bin:$PATH
+```
+
+#### 最後讀取環境變數
+
+```
+$source~/.bashrc
 ```
 
 
