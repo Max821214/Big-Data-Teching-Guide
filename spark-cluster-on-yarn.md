@@ -330,7 +330,7 @@ $sudo tar -xvf hadoop.tgz
 
 #### Step 11:建立環境變數 {#step-12建立環境變數}
 
-```
+```bash
 $sudo vim ~/.bashrc
 ```
 
@@ -343,22 +343,21 @@ export PATH=$PATH:$HADOOP_BIN
 
 #### 最後讀取環境變數 {#最後讀取環境變數}
 
-```
-$source
- ~/.bashrc
+```bash
+$source ~/.bashrc
 ```
 
 #### Step 12:開啟 Hadoop 環境 {#step-13開啟-hadoop-環境}
 
 #### 初始化 Namenode {#初始化-namenode}
 
-```
+```bash
 $/opt/hadoop/bin/hdfs namenode -format
 ```
 
 #### 分別開啟 {#分別開啟}
 
-```
+```bash
 $/opt/hadoop/sbin/start-dfs.sh
 $/opt/hadoop/sbin/start-yarn.sh
 ```
@@ -369,11 +368,40 @@ $/opt/hadoop/sbin/start-yarn.sh
 $/opt/hadoop/sbin/start-all.sh
 ```
 
-#### 查看程序是否開啟 {#分別開啟}
+#### Step 13:查看程序是否開啟 {#分別開啟}
+
+```bash
+$jps
+```
+
+#### master
 
 ```
-$/opt/hadoop/sbin/start-dfs.sh
-$/opt/hadoop/sbin/start-yarn.sh
+9413 SecondaryNameNode
+9208 NameNode
+9564 ResourceManager
+4909 Jps
+```
+
+#### slave
+
+```
+9650 DataNode
+11475 Jps
+9773 NodeManager
+```
+
+#### Hadoop ResourceManager Web UI {#hadoop-resourcemanager-web-ui}
+
+```
+http://localhost:8088/
+
+```
+
+#### Hadoop HDFS Namenode Web UI {#hadoop-hdfs-namenode-web-ui}
+
+```
+http://localhost:50070/
 ```
 
 
