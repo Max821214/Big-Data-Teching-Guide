@@ -395,7 +395,6 @@ $jps
 
 ```
 http://localhost:8088/
-
 ```
 
 #### Hadoop HDFS Namenode Web UI {#hadoop-hdfs-namenode-web-ui}
@@ -403,6 +402,10 @@ http://localhost:8088/
 ```
 http://localhost:50070/
 ```
+
+### 配置 Spark 環境 {#測試是否安裝成功}
+
+#### Step 1:下載 Hadoop 壓縮檔\(Master\) {#step-4下載-hadoop-壓縮檔}
 
 
 
