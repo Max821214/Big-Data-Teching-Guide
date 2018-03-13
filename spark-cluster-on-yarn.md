@@ -135,14 +135,14 @@ $scp ~/.ssh/authorized_keys spark@slave1:~/.ssh/
 ```bash
 $ssh master
 $ssh slave1
-$ssh slave2 
+$ssh slave2
 ```
 
 ### 配置 Hadoop 環境 {#測試是否安裝成功}
 
-#### Step 1:下載 Hadoop 壓縮檔 {#step-4下載-hadoop-壓縮檔}
+#### Step 1:下載 Hadoop 壓縮檔\(Master\) {#step-4下載-hadoop-壓縮檔}
 
-```
+```bash
 $cd /opt
 
 $sudovwget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
@@ -154,8 +154,181 @@ $sudo mv hadoop-2.7.3 hadoop
 $sudo chmod -R 777 /opt/hadoop
 ```
 
-#### 可至[Hadoop](http://hadoop.apache.org/releases.html)官網選擇版本安裝 {#可至-hadoop-官網選擇版本安裝}
+> #### 可至[Hadoop](http://hadoop.apache.org/releases.html)官網選擇版本安裝 {#可至-hadoop-官網選擇版本安裝}
 
-  
+#### Step 2:進入 Hadoop 配置檔目錄並刪除原有配置檔 {#step-5進入-hadoop-配置檔目錄並刪除原有配置檔}
+
+```bash
+$cd /opt/hadoop/etc/hadoop/
+
+$sudo rm -rf core-site.xml
+
+$sudo rm -rf mapred-site.xml.template
+
+$sudo rm -rf hdfs-site.xml
+
+$sudo rm -rf yarn-site.xml
+```
+
+#### Step 3:修改 hadoop-env.sh {#step-6修改-hadoop-envsh}
+
+```bash
+$sudo vim hadoop-env.sh
+```
+
+#### 新增 {#新增}
+
+```
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+
+#### Step 4:修改 core-site.xml {#step-7修改-core-sitexml}
+
+```
+$sudo vim core-site.xml
+```
+
+```xml
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/hadoop/tmp</value>
+        <description>A base for other temporary directories.</description>
+    </property>
+</configuration>
+```
+
+#### Step 5:修改 yarn-site.xml {#step-7修改-core-sitexml}
+
+```
+$sudo vim yarn-site.xml
+```
+
+```xml
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
+  <property>
+        <name>yarn.resourcemanager.address</name>
+        <value>master:8032</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.scheduler.address</name>
+        <value>master:8030</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address</name>
+        <value>master:8035</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.admin.address</name>
+        <value>master:8033</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.webapp.address</name>
+        <value>master:8088</value>
+    </property>
+</configuration>
+```
+
+#### Step 6:修改 mapred-site.xml {#step-7修改-core-sitexml}
+
+```
+$sudo vim mapred-site.xml
+```
+
+```xml
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+```
+
+#### Step 7:修改 hdfs-site.xml {#step-7修改-core-sitexml}
+
+```
+$sudo vim hdfs-site.xml
+```
+
+```xml
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>master:9001</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:/opt/hadoop/tmp/hdfs/name</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:/opt/hadoop/tmp/hdfs/data</value>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>2</value>
+    </property>
+</configuration>
+```
+
+> dfs.replication 可自行設定，代表資料備份數量
+
+#### Step 8:修改 slaves {#step-7修改-core-sitexml}
+
+```bash
+$sudo vim slaves
+```
+
+```
+slave1
+slave2
+```
+
+#### Step 9:修改 yarn-env.xml {#step-7修改-core-sitexml}
+
+```bash
+$sudo vim hdfs-site.xml
+```
+
+```xml
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+
+#### Step 10:把 Master 的檔案壓縮並送到 Slave 節點 {#step-7修改-core-sitexml}
+
+把 master 的 /opt/hadoop 的路徑內容壓縮
+
+```bash
+$cd /opt
+$sudo tar -czvf hadoop.tgz hadoop/
+$scp hadoop.tgz slave1:~/ && ssh slave1 sudo mv ~/hadoop.tgz /opt
+$scp hadoop.tgz slave2:~/ && ssh slave2 sudo mv ~/hadoop.tgz /opt
+```
+
+到每個 slave 節點把 `hadoop.tgz` 解壓縮到`/opt`
+
+```bash
+$cd /opt
+$sudo tar -xvf hadoop.tgz
+```
+
+
+
 
 
