@@ -328,7 +328,53 @@ $cd /opt
 $sudo tar -xvf hadoop.tgz
 ```
 
+#### Step 11:建立環境變數 {#step-12建立環境變數}
 
+```
+$sudo vim ~/.bashrc
+```
+
+```
+export HADOOP_HOME="/opt/hadoop"
+export PATH=$PATH:$HADOOP_HOME
+export HADOOP_BIN="/opt/hadoop/bin"
+export PATH=$PATH:$HADOOP_BIN
+```
+
+#### 最後讀取環境變數 {#最後讀取環境變數}
+
+```
+$source
+ ~/.bashrc
+```
+
+#### Step 12:開啟 Hadoop 環境 {#step-13開啟-hadoop-環境}
+
+#### 初始化 Namenode {#初始化-namenode}
+
+```
+$/opt/hadoop/bin/hdfs namenode -format
+```
+
+#### 分別開啟 {#分別開啟}
+
+```
+$/opt/hadoop/sbin/start-dfs.sh
+$/opt/hadoop/sbin/start-yarn.sh
+```
+
+#### 或者全開 {#或者全開}
+
+```
+$/opt/hadoop/sbin/start-all.sh
+```
+
+#### 查看程序是否開啟 {#分別開啟}
+
+```
+$/opt/hadoop/sbin/start-dfs.sh
+$/opt/hadoop/sbin/start-yarn.sh
+```
 
 
 
