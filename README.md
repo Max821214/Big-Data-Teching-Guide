@@ -34,6 +34,12 @@ Hadoop 有以下主要特色：
 
 * [Apache Sqoop](http://sqoop.apache.org/)：是一種用於 Apache Hadoop 的 HDFS 和結構化資料存儲（如關係型資料庫）之間高效率傳輸並轉換批次資料格式的工具。
 
+* [Apache Mahout](https://mahout.apache.org/)：是一個機器學習庫，用於資料的分群，分類和協同過濾。Mahout是介於分散式資料系統的頂層，如MapReduce。
+
+* [Apache Pig](https://pig.apache.org/)：是個能處理任何類型的資料，並在Hadoop上運行的高級平台。Pig使用PigLatin語言編寫程式，並讓我們花更少的時間寫作map-reduce的程式分析大型的數據集。
+
+
+
 # NoSQL
 
 NoSQL最早出現於1998年由Carlo Strozzi所開發的一個開源、輕量化，且不提供SQL查詢功能的NoSQL。NoSQL資料庫提供一種儲存和檢索資料的方法，這種方法的建構模式不像關聯式資料庫使用表格來記錄資料和維持資料間的關聯。NoSQL 資料庫也越來越多地用於 Web 應用和大數據上。NoSQL也被認為是「No only SQL」的縮寫，主要強調可支援類似SQL的查詢語言。
