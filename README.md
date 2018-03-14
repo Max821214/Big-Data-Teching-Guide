@@ -36,13 +36,13 @@ Hadoop 有以下主要特色：
 
 * [Apache Pig](https://pig.apache.org/)：是個能處理任何類型的資料，並在Hadoop上運行的高級平台。Pig使用PigLatin語言編寫程式，並讓我們花更少的時間寫作map-reduce的程式分析大型的數據集。
 
-
-
 # Hadoop Components
 
 Hadoop架構中主要由三個元件組成，分別為MapReduce、HDFS，以及Yarn。
 
-                                                  ![](/assets/hadoop_architecture.jpg)
+```
+![](/assets/hadoop_architecture.jpg)
+```
 
 * MapReduce：在Hadoop扮演運算角色，用於處理存儲在HDFS中的大量數據的軟體編程模型。MapReduce可以平行化處理大量的數據。
 * HDFS：Hadoop的主要儲存系統。HDFS儲存那些在商用硬體叢集上非常大的檔案。
