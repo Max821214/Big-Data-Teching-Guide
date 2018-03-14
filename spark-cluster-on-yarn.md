@@ -67,9 +67,7 @@ $sudo vim /etc/profile
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-
-export JRE_HOME=${JAVA_HOME}/jre   
-
+export JRE_HOME=${JAVA_HOME}/jre  
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib   
 
 export PATH=${JAVA_HOME}/bin:$PATH
@@ -86,7 +84,6 @@ $java -version
 
 ```bash
 $sudo apt-get install -y openssh-server
-
 $ssh-keygen
 ```
 
@@ -122,13 +119,9 @@ $ssh slave2
 
 ```bash
 $cd /opt
-
-$sudovwget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
-
+$sudovwget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.g
 $sudo tar -xvf hadoop-2.7.3.tar.gz
-
 $sudo mv hadoop-2.7.3 hadoop
-
 $sudo chmod -R 777 /opt/hadoop
 ```
 
@@ -138,13 +131,9 @@ $sudo chmod -R 777 /opt/hadoop
 
 ```bash
 $cd /opt/hadoop/etc/hadoop/
-
 $sudo rm -rf core-site.xml
-
 $sudo rm -rf mapred-site.xml.template
-
 $sudo rm -rf hdfs-site.xml
-
 $sudo rm -rf yarn-site.xml
 ```
 
@@ -353,13 +342,13 @@ $jps
 #### Hadoop ResourceManager Web UI {#hadoop-resourcemanager-web-ui}
 
 ```
-http://localhost:8088/
+http://master:8088/
 ```
 
 #### Hadoop HDFS Namenode Web UI {#hadoop-hdfs-namenode-web-ui}
 
 ```
-http://localhost:50070/
+http://master:50070/
 ```
 
 ### 配置 Spark 環境 {#測試是否安裝成功}
