@@ -38,13 +38,13 @@ Hadoop 有以下主要特色：
 
 # Hadoop Components
 
-Hadoop架構中主要由三個元件組成，分別為MapReduce、HDFS，以及Yarn。
+Hadoop架構中主要由三個元件組成，分別為MapReduce、HDFS，以及YARN。
 
 ![](/assets/hadoop_architecture.jpg)
 
 * MapReduce：在Hadoop扮演運算角色，用於處理存儲在HDFS中的大量數據的軟體編程模型。MapReduce可以平行化處理大量的數據。
 * HDFS：Hadoop的主要儲存系統。HDFS儲存那些在商用硬體叢集上非常大的檔案。
-* Yarn：YARN是Hadoop中的排程運算框架，是在Hadoop 2.0加入的。它提供資源管理，並允許多個資料處理引擎，例如串流，資料科學和批次處理。
+* YARN：YARN是Hadoop中的排程運算框架，是在Hadoop 2.0加入的。它提供資源管理，並允許多個資料處理引擎，例如串流，資料科學和批次處理。
 
 # NoSQL
 
