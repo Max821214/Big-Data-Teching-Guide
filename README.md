@@ -36,7 +36,7 @@ Hadoop 有以下主要特色：
 
 * [Apache Pig](https://pig.apache.org/)：是個能處理任何類型的資料，並在Hadoop上運行的高級平台。Pig使用PigLatin語言編寫程式，並讓我們花更少的時間寫作map-reduce的程式分析大型的數據集。
 
-
+![](/assets/hadoop-ecosystem.png)Ecosystem，來源：http://www.dotnettricks.com/learn/hadoop/apache-hadoop-ecosystem-and-components
 
 # Hadoop Components
 
