@@ -17,6 +17,8 @@ $sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A
 $echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 ```
 
+> #### 注意，不同版本的 OS 有不同的清單
+
 #### Step 3:更新本地套件庫
 
 ```bash
