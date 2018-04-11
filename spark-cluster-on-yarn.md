@@ -270,7 +270,7 @@ slave2
 #### Step 9:修改 yarn-env.xml {#step-7修改-core-sitexml}
 
 ```bash
-$sudo vim hdfs-site.xml
+$sudo vim yarn-env.xml
 ```
 
 ```xml
