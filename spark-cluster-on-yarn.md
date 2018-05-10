@@ -267,10 +267,10 @@ slave1
 slave2
 ```
 
-#### Step 9:修改 yarn-env.xml {#step-7修改-core-sitexml}
+#### Step 9:修改 yarn-env.sh {#step-7修改-core-sitexml}
 
 ```bash
-$sudo vim yarn-env.xml
+$sudo vim yarn-env.sh
 ```
 
 ```xml
