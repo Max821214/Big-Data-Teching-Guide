@@ -36,8 +36,6 @@ Hadoop 有以下主要特色：
 
 * [Apache Pig](https://pig.apache.org/)：是個能處理任何類型的資料，並在Hadoop上運行的高級平台。Pig使用PigLatin語言編寫程式，並讓我們花更少的時間寫作map-reduce的程式分析大型的數據集。
 
-
-
 # Hadoop Components
 
 Hadoop架構中主要由三個元件組成，分別為MapReduce、HDFS，以及YARN。
@@ -53,4 +51,8 @@ Hadoop架構中主要由三個元件組成，分別為MapReduce、HDFS，以及Y
 NoSQL最早出現於1998年由Carlo Strozzi所開發的一個開源、輕量化，且不提供SQL查詢功能的NoSQL。NoSQL資料庫提供一種儲存和檢索資料的方法，這種方法的建構模式不像關聯式資料庫使用表格來記錄資料和維持資料間的關聯。NoSQL 資料庫也越來越多地用於 Web 應用和大數據上。NoSQL也被認為是「No only SQL」的縮寫，主要強調可支援類似SQL的查詢語言。
 
 目前NoSQL根據儲存應用可分為四個類型，分別為鍵值資料庫、文件資料庫、行儲存資料庫，以及圖形關聯資料庫。
+
+
+
+Test
 
