@@ -11,7 +11,7 @@
 $sudo vim /etc/hosts
 ```
 
-#### Step 2:安裝 JDK 環境\(Test\)
+#### Step 2:安裝 JDK 環境
 
 ##### 2.1 自動安裝
 
