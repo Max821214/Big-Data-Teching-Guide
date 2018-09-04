@@ -40,6 +40,21 @@ $cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 $sudo wget http://apache.stu.edu.tw/kafka/2.0.0/kafka_2.11-2.0.0.tgz
 $sudo tar -xzf kafka_2.11-2.0.0.tgz
 $sudo chown -R ${USER}:${USER} /opt/kafka_2.11-2.0.0
+$cd kafka_2.11-2.0.0
+```
+
+#### Step 5:打開 zookeeper 服務
+
+> 在使用 Kafka 服務前須有 zookeeper 服務，若背景已有 zookeeper 服務，可跳過此步驟
+
+```bash
+$bin/zookeeper-server-start.sh config/zookeeper.properties&
+```
+
+#### Step 6:打開 Kafka服務
+
+```bash
+$bin/kafka-server-start.sh config/server.properties&
 ```
 
 
