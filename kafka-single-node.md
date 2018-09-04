@@ -57,5 +57,33 @@ $bin/zookeeper-server-start.sh config/zookeeper.properties&
 $bin/kafka-server-start.sh config/server.properties&
 ```
 
+### 
+
+### 測試範例
+
+#### Example:
+
+#### 建立 topic
+
+```bash
+$bin/kafka-topics.sh --create --zookeeper "your hostname or ip":2181 --replication-factor 1 --partitions 1 --topic topic1
+```
+
+#### 傳送串流訊息\(command line1 作為 producer，也就是發送端\)
+
+```
+$bin/kafka-console-producer.sh --broker-list "your hostname or ip":9092 --topic topic1
+>This is test1
+```
+
+#### 接收串流訊息\(command line2 作為consumer，也就是接收端\)
+
+```
+$bin/kafka-console-consumer.sh --bootstrap-server "your hostname or ip":9092 --topic test --from-beginning
+>This is test1
+```
+
+
+
 
 
