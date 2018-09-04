@@ -102,8 +102,6 @@ $sudo vim hadoop-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
 
-#### 
-
 #### 或者使用指令寫入配置檔
 
 ```bash
