@@ -79,7 +79,7 @@ $bin/kafka-console-producer.sh --broker-list "your hostname or ip":9092 --topic 
 #### 接收串流訊息\(command line2 作為consumer，也就是接收端\)
 
 ```bash
-$bin/kafka-console-consumer.sh --bootstrap-server "your hostname or ip":9092 --topic test --from-beginning
+$bin/kafka-console-consumer.sh --bootstrap-server "your hostname or ip":9092 --topic topic1 --from-beginning
 >This is test1
 ```
 
