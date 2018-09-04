@@ -80,7 +80,7 @@ $bin/kafka-console-producer.sh --broker-list "your hostname or ip":9092 --topic 
 
 ```bash
 $bin/kafka-console-consumer.sh --bootstrap-server "your hostname or ip":9092 --topic topic1 --from-beginning
->This is test1
+This is test1
 ```
 
 
