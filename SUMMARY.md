@@ -6,7 +6,7 @@
 
 ## BigData 相關工具安裝
 
-* [Hadoop Single Node](https://github.com/Max821214/Big-Data-Teching-Guide/blob/master/BigData/hadoop-single-node.md)
+* Hadoop Single Node
 * [Spark Single Node \(on Yarn\)](spark-single-node-on-yarn.md)
 * [Sqoop](sqoop.md)
 * [Spark Cluster \(on Yarn\)](spark-cluster-on-yarn.md)
