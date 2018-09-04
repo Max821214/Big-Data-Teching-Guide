@@ -6,7 +6,7 @@
 
 | 名稱 | 版本 |
 | :--- | :--- |
-| OS | Ubuntu 14.04 |
+| OS | Ubuntu 14.04、Ubuntu 16.04 |
 | Spark | 2.0.0 |
 
 #### Step 1:下載 Spark 壓縮檔\(需要下載與 Hadoop 版本符合的 library\)

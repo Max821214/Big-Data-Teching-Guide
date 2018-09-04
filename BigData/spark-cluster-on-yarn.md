@@ -2,7 +2,7 @@
 
 | 名稱 | 版本 |
 | :--- | :--- |
-| OS | Ubuntu 14.04 |
+| OS | Ubuntu 14.04、Ubuntu 16.04 |
 | Hadoop | 2.7.3 |
 | Spark | 2.0.0 |
 
