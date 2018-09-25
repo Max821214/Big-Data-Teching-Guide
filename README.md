@@ -27,7 +27,7 @@ Hadoop 有以下主要特色：
 
 # NoSQL
 
-NoSQL最早出現於1998年由Carlo Strozzi所開發的一個開源、輕量化，且不提供SQL查詢功能的NoSQL。NoSQL資料庫提供一種儲存和檢索資料的方法，這種方法的建構模式不像關聯式資料庫使用表格來記錄資料和維持資料間的關聯。NoSQL 資料庫也越來越多地用於 Web 應用和大數據上。NoSQL也被認為是「No only SQL」的縮寫，主要強調可支援類似SQL的查詢語言。
+NoSQL 最早出現於1998年由 Carlo Strozzi 所開發的一個開源、輕量化，且不提供 SQL 查詢功能的 NoSQL。NoSQL 資料庫提供一種儲存和檢索資料的方法，這種方法的建構模式不像關聯式資料庫使用表格來記錄資料和維持資料間的關聯。NoSQL 資料庫也越來越多地用於 Web 應用和大數據上。NoSQL 也被認為是「No only SQL」的縮寫，主要強調可支援類似 SQL 的查詢語言。
 
 目前NoSQL根據儲存應用可分為四個類型，分別為鍵值資料庫\(Key-value store\)、文件資料庫\(Document store\)、行儲存資料庫\(Column store\)，以及圖形關聯資料庫\(Graph store\)。
 
