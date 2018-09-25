@@ -16,13 +16,13 @@
 
 # Hadoop
 
-Apache Hadoop 是一款支援資料密集型分散式應用，並以Apache 2.0許可協議發佈的開源軟體框架。它支援在硬體建構的大型叢集上執行的應用程式。Hadoop 本來是 Apache.org 在 Lucene 下的一個專案，由 Dong Cutting 所開發，是一個開放源始碼的分散式計算系統的JAVA實作，用來處理與保存大量資料的雲端運算平台，目前是 Apache top-level 專案。Hadoop 主要由運算模組 MapReduce 和 分散式檔案系統 HDFS 所組成，是由 Google Map Reduce 及 GFS\(Google File System\) 延伸所開發出的工具。
+Apache Hadoop 是一款支援資料密集型分散式應用，並以Apache 2.0許可協議發佈的開源軟體框架。它支援在硬體建構的大型叢集上執行的應用程式。Hadoop 本來是 Apache.org 在 Lucene 下的一個專案，由 Dong Cutting 所開發，是一個開放源始碼的分散式計算系統的 JAVA 實作，用來處理與保存大量資料的雲端運算平台，目前是 Apache top-level 專案。Hadoop 主要由運算模組 MapReduce 和 分散式檔案系統 HDFS 所組成，是由 Google Map Reduce 及 GFS\(Google File System\) 延伸所開發出的工具。
 
 Hadoop 有以下主要特色：
 
-* 高效性：Hadoop能夠在節點之間動態地移動數據，並保證各個節點的動態平衡，因此處理速度非常快。
-* 高擴展性：Hadoop是在可用的叢集系統間分配數據並完成計算任務的，這些叢集節點可以快速地擴展到數以千計的節點中。 
-* 高可靠性：Hadoop能夠自動保存數據的多個副本，並且能夠自動將失敗的任務重新分配
+* 高效性：Hadoop 能夠在節點之間動態地移動數據，並保證各個節點的動態平衡，因此處理速度非常快。
+* 高擴展性：Hadoop 是在可用的叢集系統間分配數據並完成計算任務的，這些叢集節點可以快速地擴展到數以千計的節點中。 
+* 高可靠性：Hadoop 能夠自動保存數據的多個副本，並且能夠自動將失敗的任務重新分配
 * 經濟性：Hadoop 採取分散式運算和儲存，無需昂貴高階的伺服器，只要一般的 server 或普通主機即可架構出高效能、高容量的叢集
 
 # NoSQL
