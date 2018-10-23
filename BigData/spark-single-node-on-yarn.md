@@ -81,10 +81,20 @@ $source ~/.bashrc
 
 ### 驗證安裝成功 {#配置-hadoop-環境}
 
-#### Example :執行 Spark 提供的 example jar
+#### Example1\(單機模式測試\) :執行 Spark 提供的 example jar 
 
 ```
 $spark-submit --class org.apache.spark.examples.SparkPi --master local[2] /opt/spark/examples/jars/spark-examples_2.11-2.0.0.jar
+...
+...
+Pi is roughly 3.145355726778634
+...
+```
+
+#### Example1\(Yarn模式測試\) :執行 Spark 提供的 example jar 
+
+```
+$spark-submit --class org.apache.spark.examples.SparkPi --master yarn  --deploy-mode client /opt/spark/examples/jars/spark-examples_2.11-2.0.0.jar
 ...
 ...
 Pi is roughly 3.145355726778634
