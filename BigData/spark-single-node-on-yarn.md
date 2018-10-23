@@ -42,6 +42,7 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH
+export SPARK_LOCAL_IP="127.0.0.1"
 ```
 
 #### 指令新增
@@ -94,7 +95,7 @@ Pi is roughly 3.145355726778634
 #### Example1\(Yarn模式測試\) :執行 Spark 提供的 example jar
 
 ```
-$spark-submit --class org.apache.spark.examples.SparkPi --master yarn  --deploy-mode client /opt/spark/examples/jars/spark-examples_2.11-2.0.0.jar
+$spark-submit --class org.apache.spark.examples.SparkPi --master yarn --deploy-mode client /opt/spark/examples/jars/spark-examples_2.11-2.0.0.jar
 ...
 ...
 Pi is roughly 3.145355726778634
