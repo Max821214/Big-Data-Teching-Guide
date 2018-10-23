@@ -52,6 +52,7 @@ $echo "export HADOOP_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark
 $echo "export YARN_CONF_DIR=\$HADOOP_HOME/etc/hadoop" | sudo tee -a /opt/spark/conf/spark-env.sh
 $echo "export SPARK_HOME=/opt/spark" | sudo tee -a /opt/spark/conf/spark-env.sh
 $echo "export PATH=\$SPARK_HOME/bin:\$PATH" | sudo tee -a /opt/spark/conf/spark-env.sh
+$echo "export SPARK_LOCAL_IP="127.0.0.1"" | sudo tee -a /opt/spark/conf/spark-env.sh
 ```
 
 #### Step 3:建立環境變數 {#step-12建立環境變數}
