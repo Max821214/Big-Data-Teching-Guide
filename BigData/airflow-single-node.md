@@ -7,13 +7,13 @@
 | OS | Ubuntu 16.04 |
 | Airflow | 1.10.1 |
 
-#### 
-
 #### **Step 1: 利用 virtualenv 建立 Airflow 虛擬環境**
 
 ```bash
 $virtualenv [--no-site-packages] airflow
 ```
+
+> 注意：--no-site-packages 可建立乾淨的 python 虛擬環境
 
 #### **Step 2: 進入虛擬環境**
 
