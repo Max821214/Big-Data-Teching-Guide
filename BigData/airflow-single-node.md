@@ -42,5 +42,11 @@ $pip install apache-airflow
 $export AIRFLOW_HOME={指定家目錄}
 ```
 
+#### **Step 6: 初始化 Airflow 紀錄的 DB**
+
+```bash
+$airflow initdb
+```
+
 
 
