@@ -307,8 +307,6 @@ http://localhost:8088/
 http://localhost:50070/
 ```
 
-### 
-
 ### 測試範例
 
 #### Example 1:在本地端建立檔案，並上傳至 HDFS

@@ -1,8 +1,6 @@
 # Airflow Sequential Executor
 
-> 注意:
->
-> 須先確認有安裝 pip
+> 注意:須先確認有安裝 pip
 
 | 名稱 | 版本 |
 | :--- | :--- |
@@ -11,7 +9,7 @@
 
 #### 
 
-#### **Step 1: 利用 virtualenv 建立 airflow 虛擬環境**
+#### **Step 1: 利用 virtualenv 建立 Airflow 虛擬環境**
 
 ```bash
 $virtualenv [--no-site-packages] airflow
@@ -29,14 +27,14 @@ $source ./airflow/bin/activate
 $export SLUGIFY_USES_TEXT_UNIDECODE=yes
 ```
 
-#### **Step 4: 利用 pip 安裝 airflow 和相關套件**
+#### **Step 4: 利用 pip 安裝 Airflow 和相關套件**
 
 ```bash
 $pip install docutils
 $pip install apache-airflow
 ```
 
-#### **Step 5: 設定 airflow 的家目錄**
+#### **Step 5: 設定 Airflow 的家目錄**
 
 ```bash
 $export AIRFLOW_HOME={指定家目錄}
@@ -46,6 +44,28 @@ $export AIRFLOW_HOME={指定家目錄}
 
 ```bash
 $airflow initdb
+```
+
+#### **Step 7: 開啟 Airflow webserver UI**
+
+```bash
+$airflow webserver -p {port} -D
+```
+
+> 注意：port 預設是 8080
+
+#### **Step 8: 開啟 Airflow scheduler**
+
+```bash
+$nohup airflow scheduler > /dev/null 2>&1 &
+```
+
+### 驗證安裝成功 {#配置-hadoop-環境}
+
+#### Airflow webserver UI
+
+```
+http://{ip}:{port}/
 ```
 
 
