@@ -10,7 +10,8 @@
 * [Spark Single Node \(on Yarn\)](BigData/spark-single-node-on-yarn.md)
 * [Sqoop](BigData/sqoop.md)
 * [Spark Cluster \(on Yarn\)](BigData/spark-cluster-on-yarn.md)
-* [Kafka Single Node](kafka-single-node.md)
+* [Kafka Single Node](BigData/kafka-single-node.md)
+* [Airflow Single Node](BigData/airflow-single-node.md)
 
 ## NoSQL  安裝
 
