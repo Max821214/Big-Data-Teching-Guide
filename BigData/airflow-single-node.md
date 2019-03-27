@@ -40,13 +40,19 @@ $pip install apache-airflow
 $export AIRFLOW_HOME={指定家目錄}
 ```
 
-#### **Step 6: 初始化 Airflow 紀錄的 DB**
+#### **Step 6: 建立 AIRFLOW\_HOME 目錄**
+
+```bash
+$mkdir -p ${AIRFLOW_HOME}
+```
+
+#### **Step 7: 初始化 Airflow 紀錄的 DB**
 
 ```bash
 $airflow initdb
 ```
 
-#### **Step 7: 開啟 Airflow webserver UI**
+#### **Step 8: 開啟 Airflow webserver UI**
 
 ```bash
 $airflow webserver -p {port} -D
@@ -54,7 +60,7 @@ $airflow webserver -p {port} -D
 
 > 注意：port 預設是 8080
 
-#### **Step 8: 開啟 Airflow scheduler**
+#### **Step 9: 開啟 Airflow scheduler**
 
 ```bash
 $nohup airflow scheduler > /dev/null 2>&1 &
