@@ -5,7 +5,7 @@
 | 名稱 | 版本 |
 | :--- | :--- |
 | OS | Ubuntu 16.04 |
-| Airflow | 1.10.1 |
+| Airflow | 1.10.3 |
 
 #### **Step 1: 利用 virtualenv 建立 Airflow 虛擬環境**
 
@@ -31,7 +31,7 @@ $export SLUGIFY_USES_TEXT_UNIDECODE=yes
 
 ```bash
 $pip install docutils
-$pip install apache-airflow
+$pip install apache-airflow --proxy [ip:port]
 ```
 
 #### **Step 5: 設定 Airflow 的家目錄**
@@ -55,7 +55,7 @@ $airflow initdb
 #### **Step 8: 開啟 Airflow webserver UI**
 
 ```bash
-$airflow webserver -p {port} -D
+$airflow webserver -p [port] -D
 ```
 
 > 注意：port 預設是 8080
