@@ -31,8 +31,10 @@ $export SLUGIFY_USES_TEXT_UNIDECODE=yes
 
 ```bash
 $pip install docutils
-$pip install apache-airflow --proxy [ip:port]
+$pip install apache-airflow
 ```
+
+> 注意：若需要透過 proxy server 安裝，在 pip install package 後新增 --proxy  \[ip:port\]
 
 #### **Step 5: 設定 Airflow 的家目錄**
 
