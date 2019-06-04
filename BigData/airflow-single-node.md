@@ -31,7 +31,7 @@ $export SLUGIFY_USES_TEXT_UNIDECODE=yes
 
 ```bash
 $pip install docutils
-$pip install apache-airflow
+$pip install apache-airflow==1.10.3
 ```
 
 > 注意：若需要透過 proxy server 安裝，在 pip install package 後新增 --proxy  \[ip:port\]
